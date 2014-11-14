@@ -1,6 +1,8 @@
 ::Clean all the working directory
 del *.aux
+del *.glg
 del *.glo
+del *.gls
 del *.ist
 del *.lof
 del *.log

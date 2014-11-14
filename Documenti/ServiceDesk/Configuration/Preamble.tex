@@ -1,0 +1,51 @@
+%------------------------------------------------
+%
+% Preamble.tex
+%
+% This file contains all the settings for a correct
+% compilation of the document. Include this file
+% before starting the document section.
+%------------------------------------------------
+\documentclass[paper=A4, fontsize=11pt, parskip=full]{scrreprt}
+
+\usepackage{acronym}
+\usepackage{fourier}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage{lastpage}
+\usepackage{longtable}
+\usepackage{pdfpages}
+\usepackage{sectsty}
+\usepackage[babel]{csquotes}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage[toc]{glossaries}
+\usepackage[english, italian]{babel}
+\usepackage[protrusion=true, expansion=true]{microtype}
+\usepackage[automark, headsepline, footsepline, markuppercase]{scrpage2}
+
+\allsectionsfont{\centering \normalfont\scshape}
+
+\pagestyle{scrheadings}
+
+\lehead{Amministrazione di Sistema}
+\rohead{Service Desk}
+\chead{}
+\cfoot{\thepage{} di \pageref{LastPage}}
+
+\glossarystyle{altlist}
+\makeglossaries
+
+\newcommand{\english}[1]{\foreignlanguage{english}{\textit{#1}}}
+\newcommand{\keyword}[1]{\textbf{#1}}
+\newcommand{\entity}{Ospedale Gaetano Pini}
+\newcommand{\printListOfContents}[1]{\ifthenelse{\equal{#1}{TRUE}}{\tableofcontents{}}{}}
+\newcommand{\printListOfFigures}[1]{\ifthenelse{\equal{#1}{TRUE}}{\listoffigures{}}{}}
+\newcommand{\printListOfTables}[1]{\ifthenelse{\equal{#1}{TRUE}}{\listoftables{}}{}}
+\newcommand{\printGlossary}[1]{\ifthenelse{\equal{#1}{TRUE}}{\printglossary[title=Glossario]{}}{}}
+\newcommand{\glossaryTerm}[1]{\underline{\gls{#1}}}
+
+\input{Configuration/AcronymDatabase.tex}
+
+\input{Configuration/GlossaryDatabase.tex}

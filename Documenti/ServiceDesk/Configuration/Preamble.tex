@@ -44,7 +44,8 @@
 \newcommand{\printListOfFigures}[1]{\ifthenelse{\equal{#1}{TRUE}}{\listoffigures{}}{}}
 \newcommand{\printListOfTables}[1]{\ifthenelse{\equal{#1}{TRUE}}{\listoftables{}}{}}
 \newcommand{\printGlossary}[1]{\ifthenelse{\equal{#1}{TRUE}}{\printglossary[title=Glossario]{}}{}}
-\newcommand{\glossaryTerm}[1]{\underline{\gls{#1}}}
+\newcommand{\glossarySingolarTerm}[1]{\underline{\gls{#1}}}
+\newcommand{\glossaryPluralTerm}[1]{\underline{\glspl{#1}}}
 
 \input{Configuration/AcronymDatabase.tex}
 

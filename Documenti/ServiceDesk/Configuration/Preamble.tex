@@ -16,6 +16,7 @@
 \usepackage{longtable}
 \usepackage{pdfpages}
 \usepackage{sectsty}
+\usepackage{siunitx}
 \usepackage[utf8]{inputenc}
 \usepackage[babel]{csquotes}
 \usepackage[T1]{fontenc}
@@ -46,6 +47,7 @@
 \newcommand{\printGlossary}[1]{\ifthenelse{\equal{#1}{TRUE}}{\printglossary[title=Glossario]{}}{}}
 \newcommand{\glossarySingolarTerm}[1]{\underline{\gls{#1}}}
 \newcommand{\glossaryPluralTerm}[1]{\underline{\glspl{#1}}}
+\newcommand{\attribute}[1]{\textsc{#1}}
 
 \input{Configuration/AcronymDatabase.tex}
 

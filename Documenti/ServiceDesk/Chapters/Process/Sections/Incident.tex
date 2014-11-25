@@ -223,7 +223,7 @@ Durante l'intero svolgimento delle attività di processo il responsabile del \en
 Ciò consente di avere un processo di \ac{Incident-Management} che sia apprezzato dagli utenti/clienti con il risultato finale di un aumento della qualità di servizio offerta.
 
 \subsection[Informazioni presenti in un ticket]{informazioni presenti in un ticket}
-\label{prc-incicent-ticket}
+\label{prc-incident-ticket}
 Questa parte del documento ha lo scopo di fornire un chiara visione dei campi ed attributi che compongono una richiesta di assistenza tecnica (\english{ticket}).
 
 Fornisce una guida attraverso le diverse sezioni che la compongono che possono essere considerate come schede del \english{ticket} nello strumento utilizzato.
@@ -306,11 +306,9 @@ Stato & Stato in cui si trova il \english{ticket}. Vedi Sezione \ref{prc-inciden
 \hline
 Responsabile & Responsabile della gestione del \english{ticket}. Inizialmente è popolato dall'operatore che risponde alla richiesta, tuttavia, può essere sempre modificato se il suo responsabile, per qualsiasi motivo, cambia. Il responsabile può essere solo un membro attivo del \english{Service Desk}. & \attribute{collegamento}\\
 \hline
-Tipo & Specifica la tipologia di \english{ticket}. I valori possono essere ``\english{incident}'' oppure ``\english{service request} & \attribute{lista}\\
+Tipo & Specifica la tipologia di \english{ticket}. (vedi Sezione \ref{prc-incident-category} per maggiori dettagli) & \attribute{lista}\\
 \hline
-Categoria & Specifica la categoria presso cui si colloca il \english{ticket}. (vedi Sezione \ref{prc-ticket-category} per maggiori dettagli. & \attribute{lista}\\
-\hline
-Sottocategoria & Specifica la sotto categoria presso cui si colloca il \english{ticket}. (vedi Sezione \ref{prc-ticket-category} per maggiori dettagli. & \attribute{lista}\\
+Categoria & Specifica la categoria presso cui si colloca il \english{ticket}. (vedi Sezione \ref{prc-incident-category} per maggiori dettagli. & \attribute{lista}\\
 \hline
 Prodotto & Specifica il prodotto che è affetto dall'anomalia. & \attribute{lista}\\
 \hline
@@ -505,14 +503,59 @@ Chiuso il & Data di chiusura e archiviazione della richiesta. & \attribute{data}
 \label{prc-incident-status}
 \end{figure}
 
-Quando l'utente invia una richiesta di assistenza presso il \english{Service Desk} il \english{software} di supporto (vedi Sezione \ref{sd-tools}) \keyword{crea} un \english{ticket} che ora si trova trova nello stato \attribute{aperto}.
+Quando l'utente invia una richiesta di assistenza presso il \english{Service Desk}, il \english{software} di supporto (vedi Sezione \ref{sd-tools}) \keyword{crea} un \english{ticket} che ora si trova nello stato \attribute{aperto}.
 
-Il \english{software} ora lo \keyword{classifica} in base ai contenuti e lo marca come \attribute{classificato}, successivamente lo \keyword{redirige} all'area del processo di \ac{Incident-Management} più consona al tipo di incidente, il \english{ticket} ora è nello stato \attribute{reindirizzato}.
+Il \english{software} ora lo \keyword{classifica} in base ai contenuti e lo marca come \attribute{classificato}, successivamente lo \keyword{redirige} all'area del processo di \ac{Incident-Management} più consona al tipo di incidente; il \english{ticket} ora è nello stato \attribute{reindirizzato}.
 
 Eseguite le precedenti fasi, fatte in automatico dal \english{software} di supporto, esso viene \attribute{notificato} nel \english{monitor} dell'operatore del processo di \ac{Incident-Management} che comincerà a svolgere le attività legate al processo (vedi Sezione \ref{prc-incident-activities}).
 
-Nel momento in cui l'operatore, responsabile del \english{ticket} in oggetto, inizia ad analizzare le possibili cause dell'incidente esso passa nello stato di \attribute{analisi} e cui vi rimane finché una soluzione non viene trovata oppure è necessario eseguire \english{escalation} che porta il \english{ticket} nello stato \attribute{escalation}.
+Nel momento in cui l'operatore, responsabile del \english{ticket} in oggetto, inizia ad analizzare le possibili cause dell'incidente, esso passa nello stato di \attribute{analisi} e qui vi rimane finché una soluzione non viene trovata, oppure è necessario eseguire \english{escalation} che porta il \english{ticket} nello stato \attribute{escalation}.
 
-Nel momento in cui una soluzione è disponibile esso passa nello stato di \attribute{risoluzione} finché essa viene applicata e non è confermata, dall'utente che ha aperto la richiesta, come risolutiva.
+Nel momento in cui una soluzione è disponibile, esso passa nello stato di \attribute{risoluzione} finché essa viene applicata e confermata dall'utente che ha aperto la richiesta come risolutiva.
 
 Al termine, dopo la conferma dell'utente, il responsabile del \english{ticket} inizia la fase di chiusura dello stesso, tracciando il tutto, che lo porta nello stato di \attribute{chiuso}.
+
+\subsection[Categorizzazione di incidenti]{categorizzazione di incidenti}
+\label{prc-incident-category}
+Il supporto iniziale offerto è determinato dalla tipologia di richiesta che l'utente/cliente richiede al \english{Service Desk}. 
+
+La \keyword{classificazione} determina perciò il supporto che l'utente/cliente richiede. Deve chiaramente definire come la funzione di \english{Service Desk} risponde alla richiesta e non chi, fisicamente, risponde.
+
+Per questo motivo la convenzione consigliata ed utilizzata dal \english{framework} \ac{Information-Technology-Infrastructure-Library} imposta come primo elemento della tassonomia il \keyword{tipo}. Il tipo descrive un più ampio coinvolgimento funzionale necessario per supportare il cliente/utente.
+
+Utilizzando un elemento per indicare la tipologia si forniscono le basi per compiti conosciuti, come \ac{Request-For-Change} o \english{Service Request} o guasti, e permette di avere liste suddivise per categorie come ad esempio:
+
+\begin{itemize}
+\item{richiesta di servizio (\english{service request})}
+\begin{itemize}
+\item{aggiungi/sposta/cambia un sistema}
+\item{cambio \english{password}}
+\end{itemize}
+\item{guasto}
+\begin{itemize}
+\item{la stampante non esegue le stampe}
+\item{il sistema non si avvia}
+\end{itemize}
+\item{incidente tecnico}
+\begin{itemize}
+\item{soglia dello spazio su disco ecceduta}
+\item{\english{alert} automatico}
+\end{itemize}
+\item{aiuto/assistenza}
+\begin{itemize}
+\item{richiesta di informazioni}
+\item{assistenza nell'uso di una applicazione}
+\end{itemize}
+\end{itemize}
+
+Dagli esempi qui sopra si può percepire che viene consentito di segnalare il problema attraverso l'utilizzo di una terminologia semplice, non tecnica. Gli utenti/clienti quindi possono segnalare solo i sintomi di quello che percepiscono e richiedere assistenza in termini che loro stessi comprendono.
+
+Successivamente ad aver stabilito che il primo elemento della categorizzazione di un \english{ticket} è la tipologia il successivo, la \keyword{categoria}, cambia sulla base della tipologia selezionata. Ad esempio:
+
+\begin{center}
+\textsc{richiesta di servizio | aiuto all'utente | desktop application}
+\end{center}
+
+Infine viene aggiunto il prodotto oggetto della richiesta, affinché il personale del \english{Service Desk} abbia conoscenza su quale versione del prodotto ricercare le cause dell'anomalia.
+
+La tassonomia \ac{Information-Technology-Infrastructure-Library} aiuta il personale del \english{Service Desk} a sapere a priori quali azioni dovranno essere compiute per ottemperare alla richiesta.

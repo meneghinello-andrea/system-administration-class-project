@@ -187,7 +187,7 @@ In Figura \ref{prc-incident-activities-img} è presente un diagramma di flusso c
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[scale=0.2]{Images/Diagrams/IncidentManagement.png}
+\includegraphics[scale=0.25]{Images/Diagrams/IncidentManagement.png}
 \caption{Flusso di lavoro del processo di \ac{Incident-Management}}
 \label{prc-incident-activities-img}
 \end{figure}
@@ -494,3 +494,25 @@ Chiuso il & Data di chiusura e archiviazione della richiesta. & \attribute{data}
 \hline
 \end{longtable}
 \end{center}
+
+\subsection[Ciclo di vita di un ticket]{ciclo di vita di un ticket}
+\label{prc-incident-status}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale=0.4]{Images/Diagrams/Ticket_life_cycle.png}
+\caption{Ciclo di vita di un \english{ticket}}
+\label{prc-incident-status}
+\end{figure}
+
+Quando l'utente invia una richiesta di assistenza presso il \english{Service Desk} il \english{software} di supporto (vedi Sezione \ref{sd-tools}) \keyword{crea} un \english{ticket} che ora si trova trova nello stato \attribute{aperto}.
+
+Il \english{software} ora lo \keyword{classifica} in base ai contenuti e lo marca come \attribute{classificato}, successivamente lo \keyword{redirige} all'area del processo di \ac{Incident-Management} più consona al tipo di incidente, il \english{ticket} ora è nello stato \attribute{reindirizzato}.
+
+Eseguite le precedenti fasi, fatte in automatico dal \english{software} di supporto, esso viene \attribute{notificato} nel \english{monitor} dell'operatore del processo di \ac{Incident-Management} che comincerà a svolgere le attività legate al processo (vedi Sezione \ref{prc-incident-activities}).
+
+Nel momento in cui l'operatore, responsabile del \english{ticket} in oggetto, inizia ad analizzare le possibili cause dell'incidente esso passa nello stato di \attribute{analisi} e cui vi rimane finché una soluzione non viene trovata oppure è necessario eseguire \english{escalation} che porta il \english{ticket} nello stato \attribute{escalation}.
+
+Nel momento in cui una soluzione è disponibile esso passa nello stato di \attribute{risoluzione} finché essa viene applicata e non è confermata, dall'utente che ha aperto la richiesta, come risolutiva.
+
+Al termine, dopo la conferma dell'utente, il responsabile del \english{ticket} inizia la fase di chiusura dello stesso, tracciando il tutto, che lo porta nello stato di \attribute{chiuso}.

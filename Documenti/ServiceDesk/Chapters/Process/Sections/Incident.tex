@@ -517,13 +517,36 @@ Al termine, dopo la conferma dell'utente, il responsabile del \english{ticket} i
 
 \subsection[Categorizzazione di incidenti]{categorizzazione di incidenti}
 \label{prc-incident-category}
-Il supporto iniziale offerto è determinato dalla tipologia di richiesta che l'utente/cliente richiede al \english{Service Desk}. 
+La \keyword{classificazione} esiste per determinare il supporto iniziale più corretto e non per determinare le cause o predire le tecniche risolutive dell'incidente. Il supporto iniziale determina il flusso delle attività nella funzione di \english{Service Desk}.
 
-La \keyword{classificazione} determina perciò il supporto che l'utente/cliente richiede. Deve chiaramente definire come la funzione di \english{Service Desk} risponde alla richiesta e non chi, fisicamente, risponde.
+La tecnica di classificazione diventa più raffinata quanto più si procede nell'analisi delle cause dell'incidente attraverso la ricerca e la diagnosi.
 
-Per questo motivo la convenzione consigliata ed utilizzata dal \english{framework} \ac{Information-Technology-Infrastructure-Library} imposta come primo elemento della tassonomia il \keyword{tipo}. Il tipo descrive un più ampio coinvolgimento funzionale necessario per supportare il cliente/utente.
+Gli schemi di classificazione e le loro strategie variano, in genere, da organizzazione ad organizzazione ma essi condividono obiettivi comuni:
 
-Utilizzando un elemento per indicare la tipologia si forniscono le basi per compiti conosciuti, come \ac{Request-For-Change} o \english{Service Request} o guasti, e permette di avere liste suddivise per categorie come ad esempio:
+\begin{itemize}
+\item{essere condivisi tra il \english{business} ed il dipartimento \acs{Information-Technology};}
+\item{essere condivisi tra la funzione di \english{Service Desk} ed i gruppi di lavoro;}
+\item{essi devono orientare verso ulteriori analisi, valutazione ed instradamento e non determinare le cause scatenanti;}
+\item{essere semplici da utilizzare e da capire;}
+\item{essi devono rispecchiare la visione dell'utente/cliente e non la visione del dipartimento \acs{Information-Technology} o la visione tecnologica.}
+\end{itemize}
+
+La creazione di una \keyword{tassonomia} di classificazione non è compito del \english{software} a supporto delle attività della funzione di \english{Service Desk}, ma è compito di colui che implementa la funzione all'interno del dipartimento. Generalmente i problemi più comuni sono:
+
+\begin{itemize}
+\item{mescolare assieme gli obiettivi di classificazione con quelli di ricerca e diagnostica;}
+\item{creazione di schemi con troppe voci che rendono la navigazione, tra esse, al personale del \english{Service Desk} molto difficile;}
+\item{creazione di schemi troppo tecnici di difficile usabilità da parte degli utenti/clienti;}
+\item{creazione di schemi che mirano a guidare l'utente verso il gruppo di supporto più adeguato.}
+\end{itemize}
+
+La convenzione utilizzata e consigliata dal \english{framework} \ac{Information-Technology-Infrastructure-Library} utilizza una classificazione composta da tre elementi:
+
+\begin{center}
+\textsc{tipologia} | \textsc{categoria} | \textsc{oggetto}
+\end{center}
+
+La \keyword{tipologia} descrive un più ampio coinvolgimento funzionale necessario per supportare il cliente/utente. Utilizzandola si forniscono le basi per compiti conosciuti, come \ac{Request-For-Change} o \english{Service Request} o guasti, e permette di avere liste suddivise per \keyword{categorie}. Ad esempio:
 
 \begin{itemize}
 \item{richiesta di servizio (\english{service request})}
@@ -548,14 +571,12 @@ Utilizzando un elemento per indicare la tipologia si forniscono le basi per comp
 \end{itemize}
 \end{itemize}
 
-Dagli esempi qui sopra si può percepire che viene consentito di segnalare il problema attraverso l'utilizzo di una terminologia semplice, non tecnica. Gli utenti/clienti quindi possono segnalare solo i sintomi di quello che percepiscono e richiedere assistenza in termini che loro stessi comprendono.
+Dagli esempi sopracitati si può percepire come viene consentito di segnalare un problema attraverso l'utilizzo di una terminologia semplice e non tecnica. Gli utenti/clienti quindi possono segnalare solo i sintomi di quello che percepiscono e richiedere assistenza in termini che lo stessi comprendono.
 
-Successivamente ad aver stabilito che il primo elemento della categorizzazione di un \english{ticket} è la tipologia il successivo, la \keyword{categoria}, cambia sulla base della tipologia selezionata. Ad esempio:
+Infine viene aggiunto l'oggetto \english{target} della richiesta affinché il personale del \english{Service Desk} abbia conoscenza su quale versione del prodotto ricercare le cause dell'anomalia segnalata.
+
+Un esempio di categorizzazione di un \english{ticket} in ingresso alla funzione di \english{Service Desk} è il seguente:
 
 \begin{center}
-\textsc{richiesta di servizio | aiuto all'utente | desktop application}
+\textsc{richiesta di servizio} | \textsc{aiuto all'utente} | \textsc{desktop application}
 \end{center}
-
-Infine viene aggiunto il prodotto oggetto della richiesta, affinché il personale del \english{Service Desk} abbia conoscenza su quale versione del prodotto ricercare le cause dell'anomalia.
-
-La tassonomia \ac{Information-Technology-Infrastructure-Library} aiuta il personale del \english{Service Desk} a sapere a priori quali azioni dovranno essere compiute per ottemperare alla richiesta.

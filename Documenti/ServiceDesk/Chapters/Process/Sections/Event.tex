@@ -1,0 +1,158 @@
+%------------------------------------------------
+%
+% Event.tex 
+%
+% This section introduces the event management
+% process.
+%------------------------------------------------
+\section[Event management]{event management}
+\label{prc-event}
+
+\subsection[Perché avere un processo di EM]{perché avere un processo di EM}
+\label{prc-event-why}
+Un \keyword{evento} può essere definito come qualsiasi evento rilevabile o discernibile che ha significato per la gestione dell'infrastruttura \acs{Information-Technology} che ospita e fornisce agli utenti i servizi \acs{Information-Technology}.
+
+Gli eventi sono generalmente notifiche create da servizi \acs{Information-Technology}, \ac{Configuration-Item}, o strumenti di monitoraggio. L'effettivo funzionamento del servizio dipende dalla conoscenza sullo stato delle infrastrutture e il rilevamento di qualsiasi deviazione dal normale funzionamento designato.
+
+Vi è necessità quindi di dotarsi di buoni sistemi di monitoraggio e di controllo, che si suddividono in due tipi di categorie:
+
+\begin{itemize}
+\item{\textbf{monitoraggio attivo}: sono strumenti che eseguono \english{\glossarySingolarTerm{polling}} di alcuni, o tutti, i \ac{Configuration-Item} al fine di determinare il loro stato e relativa disponibilità;}
+\item{\textbf{monitoraggio passivo}: sono strumenti che sono in grado di ``percepire'' ed archiviare i cambiamenti di stato di alcuni, o tutti, i \ac{Configuration-Item} al fine di determinare il loro stato e relativa disponibilità.}
+\end{itemize}
+
+Sia che si abbia a disposizione strumenti di monitoraggio attivi che passivi, essi sono in grado di generare delle notifiche per lo staff del \english{Service Desk} che li informa del cambiamento di stato.
+
+\subsection[Obiettivi]{obiettivi}
+\label{prc-event-objectives}
+Il processo di \ac{Event-Management} ha lo scopo di fornire un punto di ingresso per l'esecuzione di alcuni processi di servizio ed attività. In aggiunta, esso fornisce una modalità per comparare le attuali \english{performance} ed il comportamento dei servizi \acs{Information-Technology} a fronte di quanto progettato e degli \ac{Service-Level-Agreement}.
+
+Altri obiettivi includono:
+
+\begin{itemize}
+\item{la fornitura della possibilità di rilevare, interpretare ed avviare le azioni appropriate per gli eventi;}
+\item{la fornitura delle basi per operazioni di monitoraggio e controllo e punto di ingresso per molte operazioni di servizio ed attività;}
+\item{la fornitura di informazioni operative, come pure avvertenze e le eccezioni, per aiutare l'automazione;}
+\item{supporta le attività di miglioramento continuo dei servizi offerti (\english{continual service improvement}).}
+\end{itemize}
+
+\subsection[Scopo del processo]{scopo del processo}
+\label{prc-event-scope}
+Il processo di \ac{Event-Management} può essere applicato ad ogni aspetto della gestione dei servizi che necessitano di essere costantemente mantenuti sotto controllo e che possono essere automatizzati. Tra di loro troviamo:
+
+\begin{itemize}
+\item{\ac{Configuration-Item}:}
+\begin{itemize}
+\item{alcuni sono inclusi in quanto devono rimanere costantemente in un predeterminato stato;}
+\item{alcuni sono inclusi in quanto variano frequentemente di stato ed il processo consente di automatizzare l'aggiornamento del \ac{Content-Management-System};}
+\end{itemize}
+\item{condizioni ambientali (es. rilevamento fuoco e fumo);}
+\item{monitoraggio delle licenze \english{software} per assicurare un ottimo/legale utilizzo ed allocazione di risorse;}
+\item{sicurezza (rilevamento accessi non autorizzati);}
+\item{normali attività di lavoro (\english{performance} di un particolare server.}
+\end{itemize}
+
+\subsection[Differenza tra monitoraggio e gestione di eventi]{differenza tra monitoraggio e gestione di eventi}
+\label{prc-event-difference}
+Il monitoraggio e la gestione di eventi sono strettamente correlate tra di loro, ma un po' differenti nella loro natura. La gestione di eventi si focalizza sulla generazione e rilevazione di notifiche significative sullo stato delle infrastrutture e dei servizi \acs{Information-Technology}.
+
+Invece il monitoraggio è necessario per rilevare e tenere traccia di queste notifiche, quindi esso è più ampio della gestione degli eventi. Ad esempio lo strumento di monitoraggio controlla periodicamente lo stato di un dispositivo per assicurarsi che esso sia in funzione entro limiti accettabili, anche se il dispositivo non sta generando eventi.
+
+\subsection[Valore del processo]{valore del processo}
+\label{prc-event-value}
+Il valore che l'organizzazione trae dall'implementazione di questo processo, all'interno del proprio dipartimento \acs{Information-Technology}, è generalmente indiretto; tuttavia è possibile determinare le basi per il suo valore come segue:
+
+\begin{itemize}
+\item{il processo fornisce meccanismi per una diagnosi precoce di incidenti. In molti casi, è possibile che l'incidente venga rilevato e assegnato al gruppo appropriato di intervento prima che quest'ultimo causi una interruzione di servizio;}
+\item{il processo rende possibile automatizzare alcuni tipi di attività, eliminando cosi la necessità di risorse di monitoraggio \english{real-time} intensive e costose, riducendo cosi i tempi di inattività;}
+\item{se integrato in altri processi per la gestione dei servizi (quali ad esempio \ac{Capacity-Management} o \ac{Availability-Management}), il processo può segnalare cambiamenti di stato o eccezioni che consentono allo staff tecnico di avere una risposta precoce, migliorando cosi le prestazioni del processo. Questo permetterà all'istituto di beneficiare di una più efficace e più efficiente gestione del servizio;}
+\item{il processo fornisce una base per operazioni automatizzate, aumentando cosi l'efficienza e consentendo di impiegare le risorse umane in quei lavori più innovativi, come ad esempio la progettazione di nuove funzionalità o migliorare quelle esistenti o definire nuovi modi in cui l'istituto può sfruttare la tecnologia per aumentare il vantaggio competitivo.}
+\end{itemize}
+
+\subsection[Attività del processo di EM]{attività del processo di EM}
+\label{prc-event-activities}
+Durante la fase di progettazione del ciclo di vita di un servizio \acs{Information-Technology}, si deve chiaramente definire quali eventi devono essere generati e specificare come questi siano generati dal particolare \ac{Configuration-Item}.
+
+Durante la fase di transizione, la generazione di eventi deve essere impostata e sufficientemente testata affinché possa generare informazioni utili quando il servizio sarà veramente utilizzato dagli utenti.
+
+\subsubsection[Eventi scatenati]{eventi scatenati}
+In generale di eventi ne vengono scatenati in continuazione ma non tutti devono essere catturati e successivamente registrati. E', tuttavia, importante che qualsiasi membro del dipartimento coinvolto nella progettazione, nello sviluppo, nella gestione e supporto ai servizi \acs{Information-Technology} sia informato su quali eventi siano degni di essere notati perché utili portatori di informazione.
+
+\subsubsection[Notifica di eventi]{notifica di eventi}
+Molti \ac{Configuration-Item} sono progettati e configurati per comunicare alcune informazioni su se stessi in due modalità:
+
+\begin{itemize}
+\item{il \ac{Configuration-Item} viene interrogato periodicamente da uno strumento, a supporto delle attività di processo, che colleziona certi tipi di dato. (Tecnica conosciuta come \keyword{polling})}
+\item{Il \ac{Configuration-Item} genera delle notifiche quando certe condizioni sono verificate. Questa funzionalità del \ac{Configuration-Item} deve essere progettata ed implementata per il caso specifico.}
+\end{itemize}
+
+\subsubsection[Scoperta di eventi]{scoperta di eventi}
+Successivamente alla generazione di una notifica essa sarà rilevata da un agente operante nello stesso sistema oppure trasmessa direttamente ad uno strumento di supporto, specificamente progettato per ``leggere'' ed interpretare il significato dell'evento associato.
+
+\subsubsection[Filtraggio di eventi]{filtraggio di eventi}
+Lo scopo del filtraggio di eventi è quello di decidere se comunicare l'evento all'operatore del processo, attraverso il \english{software di supporto}, oppure ignorarlo. Se ignorato, l'evento viene comunque registrato nel registro del dispositivo (\english{file} di \english{log}), ma non verrà intrapresa alcuna ulteriore azione.
+
+\subsubsection[Significato associato all'evento]{significato associato all'evento}
+Il responsabile del processo ha il compito creare delle categorie, durante la definizione stessa del processo, in cui suddividere gli eventi rilevanti; la minima suddivisione consigliata da \ac{Information-Technology-Infrastructure-Library} consiste nel suddividere gli eventi in:
+
+\begin{itemize}
+\item{\attribute{informativi}: sono eventi che non necessitano alcuna azione e non rappresentano casi eccezionali. Sono generalmente memorizzati all'interno del sistema o del servizio e mantenuti per un periodo di tempo impostato a priori. Esempi possono essere:}
+\begin{itemize}
+\item{un dispositivo si è attivato ed è disponibile;}
+\item{una transazione è stata completata con successo;}
+\end{itemize}
+\item{\attribute{attenzione}: un \english{warning} è evento che viene generato quando un servizio o un dispositivo sta per raggiungere una soglia. Questa tipologia di avvisi sono destinati a notificare al personale opportuno che il servizio ha necessità di essere controllato al fine di adottare le opportune contromisure al fine di evitare un'eccezione. Esempi possono essere:}
+\begin{itemize}
+\item{l'utilizzo della memoria su un particolare server ha raggiunto il 65\% e sta aumentando. Se raggiungesse il 75\% i tempi di risposta diverrebbero inaccettabili secondo l'\ac{Operational-Level-Agreement} del dipartimento;}
+\item{il tasso di collisioni sulla rete è cresciuto del 15\% in un piccolo periodo temporale;}
+\end{itemize}
+\item{\attribute{eccezione}: sono eventi che significano che un servizio oppure un dispositivo sta operando in modo anomalo. Tipicamente significa che non stiamo rispettano il contratto \ac{Operational-Level-Agreement} oppure \ac{Service-Level-Agreement} e che questa anomalia sta danneggiando il \english{business}. Possono rappresentare un completo fallimento, una funzionalità compromessa oppure un degrado delle \english{performance}. Esempi possono essere:}
+\begin{itemize}
+\item{malfunzionamento di un server;}
+\item{il tempo di risposta di una transazione standard ha rallentato la rete per più di 15 secondi;}
+\end{itemize}
+\end{itemize}
+
+\subsubsection[Correlazione di eventi]{correlazione di eventi}
+Se un evento è significativo, una decisione deve essere effettuata sulla base delle conseguenze che può avere e sulle azioni da intraprendere per affrontarlo. E' in questa attività di processo che il significato dell'evento è determinato.
+
+Se l'attività di correlazione riconosce un evento significativo, è necessario produrre una risposta. Il meccanismo utilizzato per avviare tale risposta viene chiamato \english{trigger}. Ne esistono di differenti tipi, ciascuno progettato specificatamente per il compito che deve avviare. Alcuni esempi includono:
+
+\begin{itemize}
+\item{\english{triggers} di incidente che generano un \english{record} nel sistema di gestione degli incidenti;}
+\item{\english{change triggers} che generano \ac{Request-For-Change};}
+\item{\english{scripts} che eseguono specifiche azioni;}
+\item{un cerca persone che che notifica ad una persona o ad un team un particolare evento;}
+\item{\english{trigger} di basi di dati che impediscono l'accesso ad un particolare utente su \english{record} o campi specifici, oppure nella creazione o eliminazione di \english{records}.}
+\end{itemize}
+
+Il processo deve ora fornire le risposte agli eventi, e ve ne sono un numero cospicuo a disposizione:
+
+\begin{itemize}
+\item{\attribute{evento registrato}: è stato creato un \english{record} riguardante l'evento e le successive azioni;}
+\item{\attribute{risposta automatica}: quando un evento è stato compreso bene dallo staff è possibile memorizzare una risposta da fornire in automatico quando l'evento si ripresenta. Questo è di solito il risultato di una buona progettazione o esperienze precedenti. Il \english{trigger} avvierà l'azione più opportuna per poi valutare se essa è stata completata con successo. In caso contrario verrà aperto un \english{ticket} di incidente. Esempi di risposte automatiche includono il riavvio di un dispositivo, il riavvio di un servizio, ecc;}
+\item{\attribute{notifica ed intervento umano}: se l'evento richiede un intervento umano, esso dovrà essere scalato. Lo scopo della segnalazione in questo caso è garantire che la persona con le giuste competenze per affrontare l'evento sia notificata. L'avviso contiene tutte le informazioni necessarie affinché si possa determinare l'azione più appropriata;}
+\item{\attribute{incidente-problema-cambiamento}: alcuni eventi rappresentano una situazione dove la risposta più appropriata viene garantita dai processi di \ac{Incident-Management}, \ac{Problem-Management} o \ac{Change-Management}.}
+\end{itemize}
+
+\subsubsection[Revisione]{revisione}
+In un dipartimento che offre numerosi servizi, migliaia di eventi sono generati su base giornaliera e non è quindi possibile controllarli uno per uno. Tuttavia, è importante controllare che tutti gli eventi significativi o eccezioni siano stati gestiti nel modo appropriato.
+
+\subsubsection[Chiusura]{chiusura}
+Alcuni eventi rimarranno aperti fin tanto che una determinata azione non si è svolta. Tuttavia, la maggior parte degli eventi non viene aperta o chiusa ma vengono solamente registrati per essere poi utilizzati come \english{input} in altri processi.
+
+Eventi a risposta automatica invece sono chiusi automaticamente dalla generazione di un secondo evento che ha l'effetto di annullare l'evento che ha scatenato la generazione della risposta automatica.
+
+\subsection[Relazioni con altri processi]{relazioni con altri processi}
+\label{prc-event-relationship}
+I principali processi con cui ha una stratta relazione sono i processi di \acf{Incident-Management}, \acf{Problem-Management} e \acf{Change-Management}, in quanto un evento può scatenare la loro invocazione.
+
+I processi di \acf{Capacity-Management} e \acf{Avaliability-Management} sono fondamentali per la definizione di eventi significativi, quali soglie impostare e come rispondere quando sono raggiunte. In cambi, questi processi ricevono dati che servono per migliorare le prestazioni e la disponibilità stessa dei servizi offerti.
+
+Il processo di \acf{Configuration-Management} è in grado di utilizzare gli eventi per determinare lo stato di un qualsiasi \ac{Configuration-Item} presente nell'infrastruttura. Confrontandoli con linee guida autorizzate all'interno del \ac{Configuration-Management-System} si può determinare si vi è stata un'attività di modifica senza autorizzazione.
+
+Il processo di \acf{Asset-Management} può utilizzare i dati generati da questo processo per determinare lo stato del ciclo di vita degli \english{assets} presenti nell'infrastruttura.
+
+Gli eventi costituiscono una ricca fonte di informazioni che può essere trattata per poi essere in inserita in sistemi di \english{knowledge management}.
+
+Il processo può svolvere un ruolo importante nel garantire che il potenziale impatto sui contratti di servizio e diagnosi precoce, e le eventuali carenze, non siano state corrette al più presto possibile, affinché l'impatto fosse ridotto al minimo.

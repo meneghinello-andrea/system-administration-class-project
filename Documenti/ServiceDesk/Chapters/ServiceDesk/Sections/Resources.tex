@@ -1,0 +1,409 @@
+%------------------------------------------------
+%
+% Resources.tex 
+%
+% This section illustrates the resources that are
+% owned by the hospital.
+%------------------------------------------------
+\section[Risorse e budget]{risorse e budget}
+\label{sd-resources}
+L'intera struttura ospedaliera è amministrata attraverso l'utilizzo di un cospicuo numero di servizi applicativi centralizzati appoggiati
+sopra un'infrastruttura di rete complessa composta da differenti tipologie di \english{hardware}.
+
+La struttura ospedaliera è composta anche da un ingente numero di risorse umane, suddivise in diverse categorie, che svolgono vari compiti all'interno dell'infrastruttura.
+
+Di seguito si fornisce un elenco delle risorse in possesso dell'\entity{} al momento della stesura del documento, tra cui troviamo:
+
+\begin{itemize}
+\item{i servizi \english{software};}
+\item{l'apparato \english{hardware};}
+\item{l'infrastruttura di rete presente;}
+\item{le risorse umane presenti.}
+\end{itemize}
+
+\subsection[Risorse software]{risorse sofware}
+\label{sd-resources-software}
+Le Tabelle \ref{sd-resources-service-health-area} e \ref{sd-resources-service-administrative-area}, di seguito riportate, illustrano i servizi applicativi attualmente attivi all'interno dell'\entity{} al momento della stesura della proposta tecnica. 
+
+Essi sono suddivisi per \keyword{area sanitaria} ed \keyword{area amministrativa}.
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{2.5cm} | p{5.5cm} |}
+\caption{Servizi applicativi dell'area sanitaria}
+\label{sd-resources-service-health-area}\\
+\hline
+\multicolumn{1}{| c |}{\textbf{servizio}} & \multicolumn{1}{| c |}{\textbf{sistema/i}} & \multicolumn{1}{| c |}{\textbf{descrizione}}\\
+\hline
+\endfirsthead
+\hline
+\multicolumn{1}{| c |}{\textbf{servizio}} & \multicolumn{1}{| c |}{\textbf{sistema/i}} & \multicolumn{1}{| c |}{\textbf{descrizione}}\\
+\hline
+\endhead
+\attribute{gestione punti gialli (pagamento ticket)} & NA & Sistemi per il pagamento del \english{ticket} da parte degli utenti.\\
+\hline
+\attribute{gestione fatturazione} & RAP - GST\_FAT & Applicazione per la gestione della fatturazione SSN, l'inserimento in prima nota e la fatturazione dei medici che esercitano in regime di intromoenia.\\
+\hline
+\attribute{valorizzazione DRG} & ARGOS & Applicativo per la verifica e valorizzazione dei ricoveri.\\
+\hline
+\attribute{gestione pazienti in urgenza (PS)} & AURORA WEB & Applicazione rivolta alla gestione del pronto soccorso. Applicazione scritta in Java (JSP) utilizza l'agente di connessione al SISS ICAN/SissWay ed un \english{middleware} che si interfaccia direttamente con i domini centrali SISS.\\
+\hline
+\attribute{piattaforma SISS} & ICAN & Piattaforma (middleware) per l'accesso ai sistemi/servizi forniti dal progetto regionale SISS.\\
+\hline
+\attribute{gestione archivi clinici} & ARCHIVIO CLINICO & Applicazione per la gestione dell'archiviazione delle cartelle cliniche cartacee.\\
+\hline
+\attribute{gestione produzione emoderivati} & EMONET & Applicativo per la gestione delle sacche sanguigne.\\
+\hline
+\attribute{gestione pazienti} & AURORA WEB & Applicazione rivolta alla gestione del paziente in regime ambulatoriale e degenza. Applicazione scritta in Java (JSP) utilizza l'agente di connessione al SISS ICAN/SissWay ed un \english{middleware} che si interfaccia direttamente con i domini centrali SISS.\\
+\hline
+\attribute{gestione diagnostica per immagini} & RIS/PACS - AGFA/FUJI & Gestione delle immagini digitali radiologiche e refertazione.\\
+\hline
+\attribute{gestione anatomia patologica} & ARMONIA & Applicativo per la gestione dei referti.\\
+\hline
+\attribute{gestione sale operatorie} & ORMAWIN2000 & Applicativo per la gestione della lista e del verbale operatorio.\\
+\hline
+\attribute{gestione del materiale protesico} & ORMAWIN2000 & Applicativo per la gestione delle protesi utilizzate in intervento chirurgico.\\
+\hline
+\attribute{gestione laboratorio di analisi} & POWERLAB & Applicativo per la gestione degli strumenti e della refertazione delle prestazioni di laboratorio.\\
+\hline
+\end{longtable}
+\end{center}
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{2.5cm} | p{5.5cm} |}
+\caption{Servizi applicativi dell'area amministrativa}
+\label{sd-resources-service-administrative-area}\\
+\hline
+\multicolumn{1}{| c |}{\textbf{servizio}} & \multicolumn{1}{| c |}{\textbf{sistema/i}} & \multicolumn{1}{| c |}{\textbf{descrizione}}\\
+\hline
+\endfirsthead
+\hline
+\multicolumn{1}{| c |}{\textbf{servizio}} & \multicolumn{1}{| c |}{\textbf{sistema/i}} & \multicolumn{1}{| c |}{\textbf{descrizione}}\\
+\hline
+\endhead
+\attribute{gestione delle risorse umane} & ALISEO & Applicazione per la gestione integrata delle risorse umane presenti nell'istituto.\\
+\hline
+\attribute{gestione protocollo} & PROTOCOLLO & Applicazione per la gestione del protocollo generale.\\
+\hline
+\attribute{gestione amministrazione magazzini} & ENCO & Applicazione per la gestione integrata della contabilità, magazzini economali e farmacia.\\
+\hline
+\end{longtable}
+\end{center}
+
+Di seguito sono fornite le tabelle \ref{sd-resources-system-health-area} e \ref{sd-resources-system-administrative-area} con il dettaglio dei sistemi (sempre suddivisi per area sanitaria ed area amministrativa), in cui troviamo:
+
+\begin{itemize}
+\item{il produttore del sistema;}
+\item{la criticità del sistema (\num{1} poco critico - \num{5} molto critico);}
+\item{il numero massimo di utenti che utilizza il sistema;}
+\item{il numero massimo di utenti contemporanei che utilizzano il sistema.}
+\end{itemize}
+
+\begin{center}
+\begin{longtable}{| p{3cm} | p{3cm} | p{2cm} | p{2cm} | p{2cm} |}
+\caption{Sistemi applicativi area sanitaria}
+\label{sd-resources-system-health-area}\\
+\hline
+\multicolumn{1}{| c |}{\textbf{sistema}} & \multicolumn{1}{| c |}{\textbf{produttore}} & \multicolumn{1}{| c |}{\textbf{criticità}} & \multicolumn{1}{| c |}{\textbf{max utenti}} & \multicolumn{1}{| c |}{\textbf{utenti cont.}}\\
+\hline
+\endfirsthead
+\hline
+\multicolumn{1}{| c |}{\textbf{sistema}} & \multicolumn{1}{| c |}{\textbf{produttore}} & \multicolumn{1}{| c |}{\textbf{criticità}} & \multicolumn{1}{| c |}{\textbf{max utenti}} & \multicolumn{1}{| c |}{\textbf{utenti cont.}}\\
+\hline
+\endhead
+\attribute{archivio clinico} & SIEMENS & \multicolumn{1}{| c |}{\num{4}} & \multicolumn{1}{| c |}{\num{15}} & \multicolumn{1}{| c |}{\num{10}}\\
+\hline
+\attribute{argos} & DEDALUS & \multicolumn{1}{| c |}{\num{4}} & \multicolumn{1}{| c |}{\num{5}} & \multicolumn{1}{| c |}{\num{2}}\\
+\hline
+\attribute{armonia} & METAFORA & \multicolumn{1}{| c |}{\num{4}} & \multicolumn{1}{| c |}{\num{6}} & \multicolumn{1}{| c |}{\num{3}}\\
+\hline
+\attribute{emonet} & INSIEL & \multicolumn{1}{| c |}{\num{4}} & \multicolumn{1}{| c |}{\num{10}} & \multicolumn{1}{| c |}{\num{2}}\\
+\hline
+\attribute{aurora web} & SIEMENS & \multicolumn{1}{| c |}{\num{2}} & \multicolumn{1}{| c |}{\num{650}} & \multicolumn{1}{| c |}{\num{100}}\\
+\hline
+\attribute{gst\_est} & SIEMENS & \multicolumn{1}{| c |}{\num{2}} & \multicolumn{1}{| c |}{\num{650}} & \multicolumn{1}{| c |}{\num{20}}\\
+\hline
+\attribute{gst\_fat} & SIEMENS & \multicolumn{1}{| c |}{\num{2}} & \multicolumn{1}{| c |}{\num{6}} & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{pacs} & AGFA & \multicolumn{1}{| c |}{\num{2}} & \multicolumn{1}{| c |}{\num{49}} & \multicolumn{1}{| c |}{\num{20}}\\
+\hline
+\attribute{elefante} & AGFA & \multicolumn{1}{| c |}{\num{2}} & \multicolumn{1}{| c |}{\num{49}} & \multicolumn{1}{| c |}{\num{20}}\\
+\hline
+\attribute{ormawin\num{2000}} & AVELCO & \multicolumn{1}{| c |}{\num{4}} & \multicolumn{1}{| c |}{\num{6}} & \multicolumn{1}{| c |}{\num{3}}\\
+\hline
+\attribute{powerlab} & UNITECH & \multicolumn{1}{| c |}{\num{2}} & \multicolumn{1}{| c |}{\num{10}} & \multicolumn{1}{| c |}{\num{5}}\\
+\hline
+\attribute{rap} & YOUNG \& YOUNG & \multicolumn{1}{| c |}{\num{3}} & \multicolumn{1}{| c |}{\num{6}} & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{ican} & SANTER & \multicolumn{1}{| c |}{\num{2}} & \multicolumn{1}{| c |}{\num{350}} & \multicolumn{1}{| c |}{\num{100}}\\
+\hline
+\end{longtable}
+\end{center}
+
+\begin{center}
+\begin{longtable}{| p{3cm} | p{3cm} | p{2cm} | p{2cm} | p{2cm} |}
+\caption{Sistemi applicativi area amministrativa}
+\label{sd-resources-system-administrative-area}\\
+\hline
+\multicolumn{1}{| c |}{\textbf{sistema}} & \multicolumn{1}{| c |}{\textbf{produttore}} & \multicolumn{1}{| c |}{\textbf{criticità}} & \multicolumn{1}{| c |}{\textbf{max utenti}} & \multicolumn{1}{| c |}{\textbf{utenti cont.}}\\
+\hline
+\endfirsthead
+\hline
+\multicolumn{1}{| c |}{\textbf{sistema}} & \multicolumn{1}{| c |}{\textbf{produttore}} & \multicolumn{1}{| c |}{\textbf{criticità}} & \multicolumn{1}{| c |}{\textbf{max utenti}} & \multicolumn{1}{| c |}{\textbf{utenti cont.}}\\
+\hline
+\endhead
+\attribute{aliseo} & WINDES & \multicolumn{1}{| c |}{\num{4}} & \multicolumn{1}{| c |}{\num{20}} & \multicolumn{1}{| c |}{\num{5}}\\
+\hline
+\attribute{enco} & ENCO & \multicolumn{1}{| c |}{\num{4}} & \multicolumn{1}{| c |}{\num{43}} & \multicolumn{1}{| c |}{\num{20}}\\
+\hline
+\attribute{teseo} & ENCO & \multicolumn{1}{| c |}{\num{2}} & \multicolumn{1}{| c |}{\num{10}} & \multicolumn{1}{| c |}{\num{2}}\\
+\hline
+\attribute{protocollo} & BETA\num{80} & \multicolumn{1}{| c |}{\num{3}} & \multicolumn{1}{| c |}{\num{15}} & \multicolumn{1}{| c |}{\num{5}}\\
+\hline
+\end{longtable}
+\end{center}
+
+\subsection[Risorse hardware]{risorse hardware}
+\label{sd-resources-hardware}
+In Tabella \ref{sd-resources-table} è presente un elenco dei server con relativa attività/applicazione su cui sono appoggiati i servizi applicativi illustrati nelle Tabelle \ref{sd-resources-system-health-area} e \ref{sd-resources-system-administrative-area}. E' inoltre presente il \english{livello di criticità} di ogni apparato \english{hardware}.
+
+\begin{center}
+\begin{longtable}{| p{3cm} | p{6cm} | p{3cm} |}
+\caption{Apparato hardware presente}
+\label{sd-resources-table}\\
+\hline
+\multicolumn{1}{| c |}{\textbf{sistema}} & \multicolumn{1}{| c |}{\textbf{descrizione}} & \multicolumn{1}{| c |}{\textbf{criticità}}\\
+\hline
+\endfirsthead
+\hline
+\multicolumn{1}{| c |}{\textbf{sistema}} & \multicolumn{1}{| c |}{\textbf{descrizione}} & \multicolumn{1}{| c |}{\textbf{criticità}}\\
+\hline
+\endhead
+\attribute{santer} & \english{Application server (cluster)} SANTER con applicazioni: BDA, SISSWAY, REPOSITORY. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{siemens} & \english{Application server (cluster)} SIEMENS con applicazione AURORAWEB. & \multicolumn{1}{| c |}{\num{5}}\\
+\hline
+\attribute{hp san} & \english{Storage} utilizzato dalle applicazioni presenti nel \english{rack}. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{marconi} & Replica \ac{Distribuited-File-System} di Microsoft. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{dafne} & Applicazione intranet. & \multicolumn{1}{| c |}{\num{3}}\\
+\hline
+\attribute{pitagora} & Applicazioni: PRESENZE, ARCHIVIO CLINICO & \multicolumn{1}{| c |}{\num{5}}\\
+\hline
+& Applicazione (portale) intranet & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{hp tape lib} & \english{HP tape library} per l'utilizzo con \english{backup} server. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{newton} & Applicazione: \english{oracle grid console}. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{edison} & Applicazione: \english{backup}. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{archimede} & Primo server del \english{cluster} Microsoft EXCHANGE 2007. & \multicolumn{1}{| c |}{\num{5}}\\
+\hline
+\attribute{volta} & Secondo server del \english{cluster} Microsoft EXCHANGE 2007. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{hp stgworks} & SAN del \english{rack}. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{apc ups} & Gruppo di continuità del \english{rack}. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{ibm storage} & SAN del \english{rack} & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{ibm tape lib} & \english{Tape library} del \english{rack}. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{era (1)} & Server Microsoft Windows 2003 con Microsoft EXCHANGE 2003. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{era (2)} & Server Microsoft Windows 2003 con servizi \ac{Distribuited-File-System}, DHCP, WINS e DNS. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{siss test} & Server SISS di \english{test}. & \multicolumn{1}{| c |}{\num{3}}\\
+\hline
+\attribute{vault 1} & \english{Tape library} del \english{rack} (applicazione RAP). & \multicolumn{1}{| c |}{\num{3}}\\
+\hline
+\attribute{origin 1} & Applicazione RAP. & \multicolumn{1}{| c |}{\num{5}}\\
+\hline
+\attribute{origin 2} & Applicazione RAP. & \multicolumn{1}{| c |}{\num{5}}\\
+\hline
+\attribute{vault 2} & \english{tape library} del \english{rack} (applicazione RAP). & \multicolumn{1}{| c |}{\num{5}}\\
+\hline
+\attribute{oracle test} & Consolidamento \english{database} Oracle. & \multicolumn{1}{| c |}{\num{5}}\\
+\hline
+\attribute{oracle d.r.} & Consolidamento \english{database} Oracle (\english{disaster recovery}). & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+& Applicazione: \english{asset management} con Microsoft SMS. & \multicolumn{1}{| c |}{\num{3}}\\
+\hline
+\attribute{minerva} & \english{Domain controller}. & \multicolumn{1}{| c |}{\num{5}}\\
+\hline
+\attribute{athena} & Accesso remoto. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+& \english{Proxy server}. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{sisstest\num{1}} & Controllo timbratura della mensa (pagamento pasto) & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{conc.zucc} & Concentratore Zucchetti, gestione timbrature. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{opn} & \english{Grouper} (valorizzazione di DRG regionali). & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+& \english{Server} videosorveglianza. & \multicolumn{1}{| c |}{\num{2}}\\
+\hline
+\attribute{polling} & Applicazione di \english{polling} per SIEMENS-GST. & \multicolumn{1}{| c |}{\num{3}}\\
+\hline
+\attribute{fwunimi} & \english{Firewall} università di Milano. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{router CISCO} & \english{Router} CISCO della sala CED. & \multicolumn{1}{| c |}{\num{5}}\\
+\hline
+\attribute{switch} & \english{Switch} distribuzione sala CED. & \multicolumn{1}{| c |}{\num{5}}\\
+\hline
+\attribute{netasq f\num{1000}} & \english{Firewall} aziendale. & \multicolumn{1}{| c |}{\num{5}}\\
+\hline
+\attribute{protocollo} & Applicazione: PROTOCOLLO BETA80. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{proxy isocr.} & \english{Proxy} per via Isocrate. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{orma} & Vecchia versione di Oracle. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{scriba} & \english{Printer server}. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{horus} & Connessione remote con virtualizzazione di Windows XP. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{argos} & Applicazione: TESEO. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{dwh} & Applicazioni: DWH - ARCHIVIO CLINICO. & \multicolumn{1}{| c |}{\num{4}}\\
+\hline
+\attribute{aurora} & SIEMENS - \english{test} applicazione AURORA/WEB. & \multicolumn{1}{| c |}{\num{3}}\\
+\hline
+\attribute{iogp} & \english{Monitoring} RAP dei punti gialli. & \multicolumn{1}{| c |}{\num{3}}\\
+\hline
+\attribute{pcmensa} & \english{Monitoring} RAP. & \multicolumn{1}{| c |}{\num{3}}\\
+\hline
+\attribute{presenze} & Applicazione: PRESENZE NHR (da migrare). & \multicolumn{1}{| c |}{\num{5}}\\
+\hline
+\end{longtable}
+\end{center}
+
+\subsection[Infrastruttura tecnologica]{infrastruttura tecnologica}
+\label{sd-resources-technology}
+Nella tabella \ref{sd-resources-technology-table} sono rappresentati i servizi di infrastruttura utilizzati all'interno dell'\entity{}.
+
+Viene inoltre riportato:
+
+\begin{itemize}
+\item{il livello di criticità (\num{1} meno critico - \num{5} molto critico);}
+\item{il numero di utenti che utilizzano l'infrastruttura;}
+\item{il numero di utenti contemporanei che utilizzano l'infrastruttura.}
+\end{itemize}
+
+\begin{center}
+\begin{longtable}{| p{2cm} | p{2cm} | p{2cm} | p{2cm} | p{2cm} | p{2cm}}
+\caption{Servizi d'infrastruttura presenti}
+\label{sd-resources-technology-table}\\
+\hline
+\multicolumn{1}{| c |}{\textbf{sistema}} & \multicolumn{1}{| c |}{\textbf{produttore}} & \multicolumn{1}{| c |}{\textbf{descrizione}} & \multicolumn{1}{| c |}{\textbf{criticità}} & \multicolumn{1}{| c |}{\textbf{max utenti}} & \multicolumn{1}{| c |}{\textbf{utenti cont.}}\\
+\hline
+\endfirsthead
+\hline
+\multicolumn{1}{| c |}{\textbf{sistema}} & \multicolumn{1}{| c |}{\textbf{produttore}} & \multicolumn{1}{| c |}{\textbf{descrizione}} & \multicolumn{1}{| c |}{\textbf{criticità}} & \multicolumn{1}{| c |}{\textbf{max utenti}} & \multicolumn{1}{| c |}{\textbf{utenti cont.}}\\
+\hline
+\endhead
+\attribute{router} & CISCO & Router per l'accesso esterno. & \multicolumn{1}{| c |}{\num{4}} & \multicolumn{1}{| c |}{NA} & \multicolumn{1}{| c |}{\num{200}}\\
+\hline
+\attribute{NETASQ F\num{1000}} & NETASQ & \english{Firewall} di protezione. & \multicolumn{1}{| c |}{\num{3}} & \multicolumn{1}{| c |}{NA} & \multicolumn{1}{| c |}{\num{200}}\\
+\hline
+\attribute{DNS} & MICROSOFT & Server per la risoluzione dei nomi. & \multicolumn{1}{| c |}{\num{2}} & \multicolumn{1}{| c |}{NA} & \multicolumn{1}{| c |}{\num{250}}\\
+\hline
+\attribute{WINS} & MICROSOFT & Server per la risoluzione dei nomi. & \multicolumn{1}{| c |}{\num{2}} & \multicolumn{1}{| c |}{NA} & \multicolumn{1}{| c |}{\num{250}}\\
+\hline
+\attribute{EXCHANGE} & MICROSOFT & Server per la gestione della posta elettronica. & \multicolumn{1}{| c |}{\num{3}} & \multicolumn{1}{| c |}{\num{600}} & \multicolumn{1}{| c |}{\num{150}}\\
+\hline
+\attribute{DHCP} & MICROSOFT & Server per l'assegnazione di indirizzi di rete. & \multicolumn{1}{| c |}{\num{2}} & \multicolumn{1}{| c |}{NA} & \multicolumn{1}{| c |}{\num{250}}\\
+\hline
+\attribute{NTP} & MICROSOFT & Server per la definizione del ``\english{time}''. & \multicolumn{1}{| c |}{\num{3}} & \multicolumn{1}{| c |}{NA} & \multicolumn{1}{| c |}{\num{250}}\\
+\hline
+\attribute{porta applicativa} & LOMBARDIA INFORMATICA & Sistema per esposizione dei servizi. & \multicolumn{1}{| c |}{\num{2}} & \multicolumn{1}{| c |}{NA} & \multicolumn{1}{| c |}{\num{50}}\\
+\hline
+\attribute{oracle} & ORACLE & \english{Database} centrale & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| c |}{\num{650}} & \multicolumn{1}{| c |}{\num{250}}\\
+\hline
+\attribute{backup} & & \english{Backup} centralizzato. & \multicolumn{1}{| c |}{\num{4}} & \multicolumn{1}{| c |}{NA} & \multicolumn{1}{| c |}{NA}\\
+\hline
+\attribute{accesso remoto} & & VPN attraverso ISA server. & \multicolumn{1}{| c |}{\num{3}} & \multicolumn{1}{| c |}{20} & \multicolumn{1}{| c |}{\num{5}}\\
+\hline
+\attribute{repository} & SANTER & Sistema di gestione dei referti. & \multicolumn{1}{| c |}{\num{3}} & \multicolumn{1}{| c |}{\num{650}} & \multicolumn{1}{| c |}{\num{100}}\\
+\hline
+\end{longtable}
+\end{center}
+
+\subsection[Risorse umane]{risorse umane}
+\label{sd-resources-human}
+Le risorse umane attualmente aventi un ruolo occupazionale all'interno dell'\entity{} sono riportate nella Tabella \ref{sd-resources-human-table}.
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{6cm} | p{3cm} |}
+\caption{Risorse umane attualmente presenti}
+\label{sd-resources-human-table}\\
+\hline
+\multicolumn{1}{| c |}{\textbf{settore}} & \multicolumn{1}{| c |}{\textbf{profilo profess.}} & \multicolumn{1}{| c |}{\textbf{nr. operatori}}\\
+\hline
+\endfirsthead
+\hline
+\multicolumn{1}{| c |}{\textbf{settore}} & \multicolumn{1}{| c |}{\textbf{profilo profess.}} & \multicolumn{1}{| c |}{\textbf{nr. operatori}}\\
+\hline
+\endhead
+\attribute{settore sanitario} & altro & \multicolumn{1}{| c |}{\num{56}}\\
+\hline
+\attribute{sanitario} & biologo & \multicolumn{1}{| c |}{\num{2}}\\
+\hline
+\attribute{sanitario} & fisioterapista & \multicolumn{1}{| c |}{\num{40}}\\
+\hline
+\attribute{sanitario} & infermiere & \multicolumn{1}{| c |}{\num{271}}\\
+\hline
+\attribute{sanitario} & medico & \multicolumn{1}{| c |}{\num{153}}\\
+\hline
+\attribute{sanitario} & tecnico & \multicolumn{1}{| c |}{\num{106}}\\
+\hline
+\attribute{tecnico} & altro & \multicolumn{1}{| c |}{\num{9}}\\
+\hline
+\attribute{tecnico} & ingegnere & \multicolumn{1}{| c |}{\num{2}}\\
+\hline
+\attribute{tecnico} & tecnico & \multicolumn{1}{| c |}{\num{92}}\\
+\hline
+\attribute{amministrativo} & amministrativo & \multicolumn{1}{| c |}{\num{64}}\\
+\hline
+\attribute{amministrativo} & dirigente amministrativo - direttore & \multicolumn{1}{| c |}{\num{7}}\\
+\hline
+& \textbf{TOTALE} & \multicolumn{1}{| c |}{\textbf{802}}\\
+\hline
+\end{longtable}
+\end{center}
+
+\subsection[Budget e costi]{budget e costi}
+\label{sd-resources-budget}
+Il \english{budget} iniziale di cui l'\entity{} dispone per l'intero appalto è pari a \num{1500000} \euro{}. In piccola parte verrà utilizzato per l'implementazione della funzione di \english{Service Desk} e dei relativi processi di \acf{Incident-Managment}, \acf{Event-Management} e \acf{Request-Fulfillment}.
+
+Il costo totale per l'implementazione ammonta \num{70922.4} \euro{} cosi suddivisi:
+
+\begin{center}
+\begin{longtable}{| p{3cm} | p{2.5cm} | p{2.5cm} | p{2.5cm} | p{2.5cm} |}
+\caption{Dettaglio costi di implementazione}
+\label{sd-resources-budget-table}\\
+\hline
+\multicolumn{1}{| c |}{\textbf{Descrizione}} & \multicolumn{1}{| c |}{\textbf{Costo unitario}} & \multicolumn{1}{| c |}{\textbf{Quantità}} & \multicolumn{1}{| c |}{\textbf{Mensilità}} & \multicolumn{1}{| c |}{\textbf{Totale}}\\
+\hline
+\endfirsthead
+\hline
+\multicolumn{1}{| c |}{\textbf{Descrizione}} & \multicolumn{1}{| c |}{\textbf{Costo unitario}} & \multicolumn{1}{| c |}{\textbf{Quantità}} & \multicolumn{1}{| c |}{\textbf{Mensilità}} & \multicolumn{1}{| c |}{\textbf{Totale}}\\
+\hline
+\endhead
+\attribute{installazione} & \multicolumn{1}{| c |}{\num{5000} \euro{}} & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| c |}{\num{5000} \euro{}}\\
+\hline
+\attribute{licenza} & \multicolumn{1}{| c |}{\num{110} \euro{}} & \multicolumn{1}{| c |}{\num{31}} & \multicolumn{1}{| c |}{\num{12}} & \multicolumn{1}{| c |}{\num{40920} \euro{}}\\
+\hline
+\attribute{test} & \multicolumn{1}{| c |}{\num{1000} \euro{}} & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| c |}{\num{1000} \euro{}}\\
+\hline
+\attribute{formazione} & \multicolumn{1}{| c |}{\num{1000} \euro{}} & \multicolumn{1}{| c |}{\num{15}} & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| c |}{\num{15000} \euro{}}\\
+\hline
+& & & \textbf{TOTALE} & \multicolumn{1}{| c |}{\textbf{\num{61920} \euro{}}}\\
+\hline
+\end{longtable}
+\end{center}
+
+I seguenti costi, riportati in Tabella \ref{sd-resources-budget-table}, si riferiscono al primo anno di attività del \english{Service Desk}, mentre per gli anni successivi l'unica voce di costo che rimarrà è \attribute{licenza}.
+
+Si informa inoltre che i costi riportati in Tabella \ref{sd-resources-budget-table} sono da intendersi IVA esclusa.

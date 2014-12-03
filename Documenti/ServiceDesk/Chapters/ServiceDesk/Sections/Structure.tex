@@ -7,54 +7,61 @@
 %------------------------------------------------
 \section[Struttura del Service Desk]{struttura del service desk}
 \label{sd-structure}
-Vi sono modi differenti per strutturare e collocare la funzionalità di \english{Service Desk} e la soluzione corretta varia in base alle esigenze dell'organizzazione che intende dotarsi di tale funzionalità. I possibili tipi di \english{Service Desk} sono:
+L'\entity{} è strutturata su due presidi (visibili in Figura \ref{sd-structure-maps}) con destinazione d'uso specifica:
+
+\begin{enumerate}
+\item{la sede principale (Piazza Cardinal Ferrari):}
+\begin{itemize}
+\item{padiglione ``principe di Piemonte'';}
+\item{monoblocco A;}
+\item{monoblocco B;}
+\item{palazzina uffici;}
+\item{ex convitto infermieri.}
+\end{itemize}
+\item{sede secondaria di via Isocrate:}
+\begin{itemize}
+\item{rifugio Fanny Finzi Ottolenghi}
+\end{itemize}
+\end{enumerate}
+
+A seguito di una supervisione dei locali ed aver valutato come sono suddivise le risorse (vedi Sezione \ref{sd-resources}) sui diversi presidi si ritiene corretta l'implementazione di un \keyword{\english{Service Desk} centralizzato}.
+
+La posizione fisica che presenta le caratteristiche più idonee è situata nel primo presidio all'interno della palazzina in cui risiedono gli uffici.
+
+Le motivazioni che hanno condotto il proponente verso questa scelta sono le seguenti:
 
 \begin{itemize}
-\item{locale}
-\item{centralizzato}
-\item{virtuale}
+\item{dimensione della struttura;}
+\item{gestione delle risorse;}
+\item{posizione geografica dei presidi.}
 \end{itemize}
 
-In seguito vengono descritti brevemente le tre tipologie al fine di far comprendere quali sono le motivazioni che hanno portato alla scelta di una specifica tipologia.
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale=0.6]{Images/maps.png}
+\caption{Posizione geografica dei presidi}
+\label{sd-structure-maps}
+\end{figure}
 
-\subsection[Service Desk Locale]{service desk locale}
-\label{sd-local-sd}
-Un \english{Service Desk} si definisce locale se si trova all'interno o fisicamente vicino alla comunità di utenti a cui deve prestare servizio. Questo spesso aiuta nella comunicazione e fornisce una presenza ben visibile, che può essere apprezzata dagli utenti, ma spesso risulta essere inefficiente e costoso nell'uso delle risorse. Come ad esempio personale che rimane in attesa di richieste ma il volume di esse non ne giustifica una presenza fissa.
+\subsection[Dimensione della struttura]{dimensione della struttura}
+\label{sd-structure-size}
+Considerando che l'intera struttura ospedaliera è collocata all'interno del medesimo comune (seppur di grandi dimensioni), la duplicazione della funzione di \english{Service Desk} su entrambi i presidi è da sconsigliarsi.
 
-Ci possono, tuttavia, essere alcune valide ragioni per il mantenimento di questa tipologia anche se i volumi delle richieste non lo giustificherebbero. Le ragioni possono includere:
+Questo perché la maggior parte delle risorse (\english{software} ed \english{hardware}) sono collocate all'interno della sede principale e la duplicazione non porterebbe alcun beneficio ma solo una duplicazione dei costi di gestione.
+
+\subsection[Gestione delle risorse]{gestione delle risorse}
+\label{sd-structure-resource-management}
+Attraverso una singola sede centralizzata è possibile gestire in modo \keyword{più efficiente} e \keyword{più economico} le risorse di cui l'istituto dispone.
+
+Consente inoltre un \keyword{risparmio} nell'acquisto di nuove risorse (\english{software} ed \english{hardware}) poiché queste non dovranno essere replicate come nel caso di sedi separate del \english{Service Desk}.
+
+\subsection[Posizione geografica]{posizione geografica}
+\label{sd-structure-position}
+Considerando che i presidi dell'\entity{} distano pochi Km l'uno dall'altro (poco meno di 10Km) la collocazione di un unica sede del \english{Service Desk} all'interno del primo presidio farà comunque beneficiare, alla struttura ospedaliera, dei benefici offerti da un \english{Service Desk} di tipo locale.
+
+Quali:
 
 \begin{itemize}
-\item{differenze di lingua, cultura o politica;}
-\item{differenze di fuso orario;}
-\item{gruppi specializzati di utenti;}
-\item{l'esistenza di servizi personalizzati/specializzati che richiedono un conoscenza specifica;}
-\item{la presenza di utenti critici.}
+\item{fornitura di una presenza visibile agli utenti;}
+\item{comunicazione con lo staff semplificata.}
 \end{itemize}
-
-\subsection[Service Desk Centralizzato]{service desk centralizzato}
-\label{sd-centralized-sd}
-E' possibile ridurre il numero di \english{Service Desk} fondendoli in una singola locazione (oppure in un numero piccolo di locazioni) collocando lo staff in uno o più \english{Service Desk} centralizzati.
-
-Questo può essere \keyword{molto più efficiente} ed \keyword{economico}, consentendo un piccolo aumento di personale se vi è un numero elevato di richieste in ingresso, e può anche portare a livelli di competenza maggiormente elevati attraverso una maggior familiarizzazione con i servizi erogati.
-
-Potrebbe comunque essere necessario mantenere una qualche presenza locale per gestire i requisiti di supporto fisico, ma tale personale può essere gestito direttamente dall'unità centrale.
-
-\subsection[Service Desk Virtuale]{service desk virtuale}
-\label{sd-virtual-sd}
-Attraverso l'uso della tecnologia, in particolare internet, e l'uso di strumenti appropriati è possibile fornire l'impressione di un singolo e centralizzato \english{Service Desk}, quando in realtà il personale può essere sparso o localizzato in numerose aree geografiche.
-
-Questo consente la possibilità di lavorare da casa oppure gruppi di sostegno secondari, decentralizzati o esternalizzati. E' comunque doveroso osservare che sono necessarie salvaguardie in tutte queste circostanze al fine di assicurare la \keyword{coerenza}, l'\keyword{uniformità} e la \keyword{qualità} del servizio erogato.
-
-\subsection[Scelta del proponente]{scelta del proponente}
-Dopo aver valutato attentamente le tre tipologie possibili di \english{Service Desk} e la collocazione geografica dei presidi dell'istituto Gaetano Pini, il proponente ritiene sia più corretta l'implementazione di un \english{Service Desk} di tipo ibrido \keyword{locale-centralizzato}.
-
-I presidi posseduti dall'istituto si trovano rispettivamente:
-
-\begin{itemize}
-\item{piazza Cardinal Ferrari 1 (Milano)}
-\item{via Isocrate (Milano)}
-\end{itemize}
-
-Data la vicinanza dei due presidi (pochi chilometri) non si ritiene necessario duplicare tutte le risorse del \english{Service Desk} per ogni presidio, ma si istituirà la sede principale della funzionalità presso uno degli uffici nel plesso principale (piazza Cardinal Ferrari 1) mentre si gestiranno, in modo decentralizzato, i gruppi di personale che si occupano dei servizi erogati nel secondo plesso (via Isocrate).
-
-Otteniamo cosi un unico \english{Service Desk} logico in cui sarà più facile la gestione delle risorse con il vantaggio che i gruppi specializzati risiedano vicino alle aree in cui i servizi sono maggiormente utilizzati, diminuendo cosi eventuali tempi per interventi in loco.

@@ -8,7 +8,7 @@
 \section[Risorse e budget]{risorse e budget}
 \label{sd-resources}
 L'intera struttura ospedaliera è amministrata attraverso l'utilizzo di un cospicuo numero di servizi applicativi centralizzati appoggiati
-sopra un'infrastruttura di rete complessa composta da differenti tipologie di \english{hardware}.
+sopra ad un'infrastruttura di rete complessa composta da differenti tipologie di \english{hardware}.
 
 La struttura ospedaliera è composta anche da un ingente numero di risorse umane, suddivise in diverse categorie, che svolgono vari compiti all'interno dell'infrastruttura.
 
@@ -17,9 +17,11 @@ Di seguito si fornisce un elenco delle risorse in possesso dell'\entity{} al mom
 \begin{itemize}
 \item{i servizi \english{software};}
 \item{l'apparato \english{hardware};}
-\item{l'infrastruttura di rete presente;}
+\item{l'infrastruttura di rete;}
 \item{le risorse umane presenti.}
 \end{itemize}
+
+Le risorse di seguito elencate saranno oggetto di responsabilità del nuovo \english{Service Desk} oggetto del capitolato d'appalto.
 
 \subsection[Risorse software]{risorse sofware}
 \label{sd-resources-software}
@@ -89,7 +91,7 @@ Essi sono suddivisi per \keyword{area sanitaria} ed \keyword{area amministrativa
 \end{longtable}
 \end{center}
 
-Di seguito sono fornite le tabelle \ref{sd-resources-system-health-area-table} e \ref{sd-resources-system-administrative-area-table} con il dettaglio dei sistemi (sempre suddivisi per area sanitaria ed area amministrativa), in cui troviamo:
+Di seguito sono fornite le Tabelle \ref{sd-resources-system-health-area-table} e \ref{sd-resources-system-administrative-area-table} con il dettaglio dei sistemi (sempre suddivisi per area sanitaria ed area amministrativa), in cui troviamo:
 
 \begin{itemize}
 \item{il produttore del sistema;}
@@ -165,6 +167,8 @@ Di seguito sono fornite le tabelle \ref{sd-resources-system-health-area-table} e
 \subsection[Risorse hardware]{risorse hardware}
 \label{sd-resources-hardware}
 In Tabella \ref{sd-resources-server-table} è presente un elenco dei server con relativa attività/applicazione su cui sono appoggiati i servizi applicativi illustrati nelle Tabelle \ref{sd-resources-system-health-area-table} e \ref{sd-resources-system-administrative-area-table}. E' inoltre presente il \english{livello di criticità} di ogni apparato \english{hardware}.
+
+Il livello di criticità è sempre espresso tramite valori interi su una scala da \num{1} (poco critico) a \num{5} (molto critico).
 
 \begin{center}
 \begin{longtable}{| p{3cm} | p{6cm} | p{3cm} |}
@@ -279,7 +283,7 @@ In Tabella \ref{sd-resources-server-table} è presente un elenco dei server con 
 \end{longtable}
 \end{center}
 
-Nella Tabella \ref{sd-resources-workstation-table} è presente un elenco delle postazioni di lavoro presenti nella struttura ospedaliera suddivise per presidio.
+Nella Tabella \ref{sd-resources-workstation-table} è presente un sommario delle postazioni di lavoro presenti nella struttura ospedaliera suddivise per presidio.
 
 \begin{center}
 \begin{longtable}{| p{4cm} | p{6cm} |}
@@ -302,10 +306,10 @@ Nella Tabella \ref{sd-resources-workstation-table} è presente un elenco delle p
 \end{longtable}
 \end{center}
 
-Nell'istituto sono presenti terminali, elencati in Tabella \ref{sd-resources-presence-table}, dedicati alla rilevazione delle presenze ed al controllo controllo degli accessi nelle strutture dell'\entity{}. Si tratta di terminali Zucchetti
+Nell'istituto sono inoltre presenti terminali, elencati in Tabella \ref{sd-resources-presence-table}, dedicati alla rilevazione delle presenze ed al controllo controllo degli accessi nelle strutture dell'\entity{}.
 
 \begin{center}
-\begin{longtable}{| p{3cm} | p{3cm} | p{3cm} | p{4cm} |}
+\begin{longtable}{| p{3.5cm} | p{3cm} | p{3cm} | p{4cm} |}
 \caption{Terminali per la rilevazione presenze e controllo accessi}
 \label{sd-resources-presence-table}\\
 \hline
@@ -486,6 +490,8 @@ Viene fornito, in Tabella \ref{sd-resources-technology-network-table}, un elenco
 \label{sd-resources-human}
 Le risorse umane attualmente aventi un ruolo occupazionale all'interno dell'\entity{} sono riportate nella Tabella \ref{sd-resources-human-table}.
 
+Si rende presente che non tutto il personale è alle dirette dipendenze dell'\entity{} ma vi sono anche figure presenti in via della validità di alcuni contratti (vedi Sezione \ref{sd-resources-contract}) che l'istituto ha siglato con aziende esterne.
+
 \begin{center}
 \begin{longtable}{| p{4cm} | p{6cm} | p{3cm} |}
 \caption{Risorse umane attualmente presenti}
@@ -527,7 +533,7 @@ Le risorse umane attualmente aventi un ruolo occupazionale all'interno dell'\ent
 
 \subsection[Contratti in essere]{contratti in essere}
 \label{sd-resources-contract}
-Nella Tabella \ref{sd-resources-contract-table} sono elencati in contratti in essere ed i fornitori \acs{Information-Technology} al momento della partecipazione alla gara d'appalto.
+Poiché molti dei sistemi \english{hardware} e \english{software} sono attualmente seguiti dalle stesse ditte produttrici e/o fornitrici, con cui sono attivi i contratti elencati in Tabella \ref{sd-resources-contract-table}, il personale del nuovo \english{Service Desk} si avvarrà di essi nel momento in cui dovrà ``scalare'' le richieste ad una seconda linea di supporto.
 
 \begin{center}
 \begin{longtable}{| p{4cm} | p{3cm} | p{5cm} |}
@@ -540,10 +546,10 @@ Nella Tabella \ref{sd-resources-contract-table} sono elencati in contratti in es
 \hline
 \multicolumn{1}{| c |}{\textbf{Fornitore}} & \multicolumn{1}{| c |}{\textbf{Produttore}} & \multicolumn{1}{| c |}{\textbf{Descrizione}}\\
 \hline
-\endfirsthead
+\endhead
 \multicolumn{3}{| c |}{\attribute{sistemi}}\\
 \hline
-\multicolumn{3}{| c |}{\textsf{area amministrativa}}\\
+\multicolumn{3}{| c |}{\attribute{area amministrativa}}\\
 \hline
 \attribute{enco} & ENCO & Gestione amministrativa e \english{software} per l'elaborazione CET regionale.\\
 \hline
@@ -553,7 +559,7 @@ Nella Tabella \ref{sd-resources-contract-table} sono elencati in contratti in es
 \hline
 \attribute{beta 80} & BETA 80 & Gestione PROTOCOLLO.\\
 \hline
-\multicolumn{3}{| c |}{\textsf{area sanitaria clinica}}\\
+\multicolumn{3}{| c |}{\attribute{area sanitaria clinica}}\\
 \hline
 \attribute{siemens} & SIEMENS & Sistema sanitario GST e AURORA WEB (comprendente di nr. 2 tecnici a presidio e Help Desk H24) comprende assistenza su \english{software} ESSEGI per la gestione dell'archivio clinico.\\
 \hline
@@ -569,12 +575,12 @@ Nella Tabella \ref{sd-resources-contract-table} sono elencati in contratti in es
 \hline
 \attribute{avelco} & AVELCO & Verbale operatorio.\\
 \hline
-\multicolumn{3}{| c |}{\textsf{area direzionale}}\\
+\multicolumn{3}{| c |}{\attribute{area direzionale}}\\
 \hline
 \multirow{2}{*}{\attribute{young \& young}} & \multirow{2}{*}{YOUNG \& YOUNG} & Assistenza sistema RAP.\\ \cline{3-3}
  & & Attività per l'elaborazione e rappresentazione di dati economici.\\
 \hline
-\multicolumn{3}{| c |}{\textsf{servici di infrastruttura di base}}\\
+\multicolumn{3}{| c |}{\attribute{servici di infrastruttura di base}}\\
 \hline
 \attribute{see} & & Realizzazione e gestione sito \english{intranet}.\\
 \hline
@@ -590,7 +596,7 @@ Nella Tabella \ref{sd-resources-contract-table} sono elencati in contratti in es
 \hline
 \attribute{enterprise technology software} & & Licenze \english{software} per \english{desktop} remoto.\\
 \hline
-\multicolumn{3}{| c |}{\textsf{servizi}}\\
+\multicolumn{3}{| c |}{\attribute{servizi}}\\
 \hline
 \attribute{ecocomputer} & & \english{Help Desk} e gestione postazione di lavoro (manutenzione, assistenza) e \english{server}.\\
 \hline
@@ -603,7 +609,7 @@ Nella Tabella \ref{sd-resources-contract-table} sono elencati in contratti in es
 \hline
 \attribute{pms italia} & & Consulenza, coordinamento operativo e DB admin.\\
 \hline
-\multicolumn{3}{| c |}{\textsf{altri sistemi presenti ma non inclusi nella gara}}\\
+\multicolumn{3}{| c |}{\attribute{altri sistemi presenti ma non inclusi nella gara}}\\
 \hline
 \attribute{agfa} & AGFA & RIP/PACS sede centrale.\\
 \hline
@@ -639,16 +645,18 @@ Tale suddivisione consente di avere un livello di controllo più fine sull'insie
 Il proponente propone la suddivisione nelle seguenti aree di competenza:
 
 \begin{itemize}
-\item{area amministrativa;}
-\item{area sanitaria;}
-\item{infrastruttura.}
+\item{\attribute{area amministrativa}: il personale di questa area si occupa del corretto funzionamento degli applicativi dell'area amministrativa;}
+\item{\attribute{area sanitaria}: il personale di questa aerea si occupa del corretto funzionamento degli applicativi dell'area sanitaria;}
+\item{\attribute{infrastruttura}: il personale di questa area ha il compito di mantenere operativi le infrastrutture \english{hardware} e di rete.}
 \end{itemize}
 
 \subsection[Budget e costi]{budget e costi}
 \label{sd-resources-budget}
-Il \english{budget} iniziale di cui l'\entity{} dispone per l'intero appalto è pari a \num{1500000.00} \euro{}. In piccola parte verrà utilizzato per l'implementazione della funzione di \english{Service Desk} e dei relativi processi di \acf{Incident-Management}, \acf{Event-Management} e \acf{Request-Fulfillment}.
+Il \english{budget} iniziale di cui l'\entity{} dispone per l'intero appalto è pari a \num{1500000.00} \euro{}. In parte verrà utilizzato per l'implementazione della funzione di \english{Service Desk} e dei relativi processi di \acf{Incident-Management}, \acf{Event-Management} e \acf{Request-Fulfillment}.
 
-Il costo totale per l'implementazione e la gestione della funzione di \english{Service Desk} per la durata di \num{5} anni ammonta a \num{229600.00} \euro{} cosi suddivisi:
+Dopo aver analizzato la Tabella \ref{sd-resources-human-table}, che illustra le risorse umane presenti, ed aver appreso della presenza di \num{94} tecnici si propone di suddividerli in tre turni lavorativi che consentono di avere un massimo di \num{31} tecnici contemporaneamente collegati al \english{software}.
+
+Il costo totale per l'implementazione e la gestione della funzione di \english{Service Desk} per la \keyword{durata di 5 anni} ammonta a \keyword{229600.00 \euro{}} cosi suddivisi:
 
 \begin{center}
 \begin{longtable}{| p{3cm} | p{2.5cm} | p{2.5cm} | p{2.5cm} | p{2.5cm} |}
@@ -662,20 +670,20 @@ Il costo totale per l'implementazione e la gestione della funzione di \english{S
 \multicolumn{1}{| c |}{\textbf{Descrizione}} & \multicolumn{1}{| c |}{\textbf{Costo unitario}} & \multicolumn{1}{| c |}{\textbf{Quantità}} & \multicolumn{1}{| c |}{\textbf{Mensilità}} & \multicolumn{1}{| c |}{\textbf{Totale}}\\
 \hline
 \endhead
-\attribute{installazione} & \multicolumn{1}{| c |}{\num{5000.00} \euro{}} & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| c |}{\num{5000.00} \euro{}}\\
+\attribute{installazione} & \multicolumn{1}{| c |}{\num{5000.00} \euro{}} & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| r |}{\num{5000.00} \euro{}}\\
 \hline
-\attribute{licenza} & \multicolumn{1}{| c |}{\num{110.00} \euro{}} & \multicolumn{1}{| c |}{\num{31}} & \multicolumn{1}{| c |}{\num{12}} & \multicolumn{1}{| c |}{\num{40920.00} \euro{}}\\
+\attribute{licenza} & \multicolumn{1}{| c |}{\num{110.00} \euro{}} & \multicolumn{1}{| c |}{\num{31}} & \multicolumn{1}{| c |}{\num{12}} & \multicolumn{1}{| r |}{\num{40920.00} \euro{}}\\
 \hline
-\attribute{manutenzione} & \multicolumn{1}{| c |}{\num{1000.00} \euro{}} & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| c |}{\num{1000.00} \euro{}}\\
+\attribute{manutenzione} & \multicolumn{1}{| c |}{\num{1000.00} \euro{}} & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| r |}{\num{1000.00} \euro{}}\\
 \hline
-\attribute{formazione} & \multicolumn{1}{| c |}{\num{1000.00} \euro{}} & \multicolumn{1}{| c |}{\num{15}} & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| c |}{\num{15000.00} \euro{}}\\
+\attribute{formazione} & \multicolumn{1}{| c |}{\num{1000.00} \euro{}} & \multicolumn{1}{| c |}{\num{15} giorni} & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| c |}{\num{15000.00} \euro{}}\\
 \hline
-& & & \textbf{TOTALE} & \multicolumn{1}{| c |}{\textbf{\num{61920.00} \euro{}}}\\
+& & & \textbf{TOTALE} & \multicolumn{1}{| r |}{\textbf{\num{61920.00} \euro{}}}\\
 \hline
 \end{longtable}
 \end{center}
 
-I seguenti costi, riportati in Tabella \ref{sd-resources-budget-first-year-table}, si riferiscono al primo anno di attività del \english{Service Desk}, mentre per gli anni successivi al primo i costi sono riportati in tabella \ref{sd-resources-budget-next-year-table}.
+I costi, riportati in Tabella \ref{sd-resources-budget-first-year-table}, si riferiscono al primo anno di attività del \english{Service Desk} all'interno della struttura ospedaliera, mentre per gli anni successivi al primo i costi sono riportati in Tabella \ref{sd-resources-budget-next-year-table}.
 
 \begin{center}
 \begin{longtable}{| p{3cm} | p{2.5cm} | p{2.5cm} | p{2.5cm} | p{2.5cm} |}
@@ -689,16 +697,16 @@ I seguenti costi, riportati in Tabella \ref{sd-resources-budget-first-year-table
 \multicolumn{1}{| c |}{\textbf{Descrizione}} & \multicolumn{1}{| c |}{\textbf{Costo unitario}} & \multicolumn{1}{| c |}{\textbf{Quantità}} & \multicolumn{1}{| c |}{\textbf{Mensilità}} & \multicolumn{1}{| c |}{\textbf{Totale}}\\
 \hline
 \endhead
-\attribute{licenza} & \multicolumn{1}{| c |}{\num{110.00} \euro{}} & \multicolumn{1}{| c |}{\num{31}} & \multicolumn{1}{| c |}{\num{12}} & \multicolumn{1}{| c |}{\num{40920.00} \euro{}}\\
+\attribute{licenza} & \multicolumn{1}{| c |}{\num{110.00} \euro{}} & \multicolumn{1}{| c |}{\num{31}} & \multicolumn{1}{| c |}{\num{12}} & \multicolumn{1}{| r |}{\num{40920.00} \euro{}}\\
 \hline
-\attribute{manutenzione} & \multicolumn{1}{| c |}{\num{1000.00} \euro{}} & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| c |}{\num{1000.00} \euro{}}\\
+\attribute{manutenzione} & \multicolumn{1}{| c |}{\num{1000.00} \euro{}} & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| c |}{\num{1}} & \multicolumn{1}{| r |}{\num{1000.00} \euro{}}\\
 \hline
 & & & \textbf{TOTALE} & \multicolumn{1}{| c |}{\textbf{\num{41920.00} \euro{}}}\\
 \hline
 \end{longtable}
 \end{center}
 
-Si informa inoltre che i costi riportati nelle Tabelle \ref{sd-resources-budget-first-year-table} e \ref{sd-resources-budget-next-year-table} sono da intendersi IVA esclusa.
+Si informa inoltre che i costi riportati nelle Tabelle \ref{sd-resources-budget-first-year-table}, \ref{sd-resources-budget-next-year-table} e \ref{sd-resources-budget-summary-table} sono da intendersi IVA esclusa.
 
 \begin{center}
 \begin{longtable}{| p{3cm} | p{2.5cm} |}
@@ -712,21 +720,21 @@ Si informa inoltre che i costi riportati nelle Tabelle \ref{sd-resources-budget-
 \multicolumn{1}{| c |}{\textbf{Anno}} & \multicolumn{1}{| c |}{\textbf{Costo}}\\
 \hline
 \endhead
-\attribute{I anno} & \multicolumn{1}{| c |}{\num{61920.00} \euro{}}\\
+\attribute{I anno} & \multicolumn{1}{| r |}{\num{61920.00} \euro{}}\\
 \hline
-\attribute{II anno} & \multicolumn{1}{| c |}{\num{41920.00} \euro{}}\\
+\attribute{II anno} & \multicolumn{1}{| r |}{\num{41920.00} \euro{}}\\
 \hline
-\attribute{III anno} & \multicolumn{1}{| c |}{\num{41920.00} \euro{}}\\
+\attribute{III anno} & \multicolumn{1}{| r |}{\num{41920.00} \euro{}}\\
 \hline
-\attribute{IV anno} & \multicolumn{1}{| c |}{\num{41920.00} \euro{}}\\
+\attribute{IV anno} & \multicolumn{1}{| r |}{\num{41920.00} \euro{}}\\
 \hline
-\attribute{V anno} & \multicolumn{1}{| c |}{\num{41920.00} \euro{}}\\
+\attribute{V anno} & \multicolumn{1}{| r |}{\num{41920.00} \euro{}}\\
 \hline
-\textbf{TOTALE} & \multicolumn{1}{| c |}{\textbf{\num{229600.00} \euro{}}}\\
+\textbf{TOTALE} & \multicolumn{1}{| r |}{\textbf{\num{229600.00} \euro{}}}\\
 \hline
 \end{longtable}
 \end{center}
 
-Dopo aver analizzato la Tabella \ref{sd-resources-human-table}, che illustra le risorse umane presenti, ed aver appreso della presenza di \num{94} tecnici si propone di suddividerli in tre turni lavorativi che consentono di avere un massimo di \num{31} tecnici contemporaneamente collegati al \english{software}. 
+I costi per gli anni successivi al primo sono soggetti a variazioni sulla base dell'inflazione e di ulteriori esigenze che potranno nascere.
 
 Si informa inoltre che è sempre possibile aumentare/diminuire il costo delle licenze al variare delle esigenze della struttura ospedaliera.

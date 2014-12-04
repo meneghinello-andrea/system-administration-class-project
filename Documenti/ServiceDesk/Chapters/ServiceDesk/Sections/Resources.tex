@@ -302,6 +302,49 @@ Nella Tabella \ref{sd-resources-workstation-table} è presente un elenco delle p
 \end{longtable}
 \end{center}
 
+Nell'istituto sono presenti terminali, elencati in Tabella \ref{sd-resources-presence-table}, dedicati alla rilevazione delle presenze ed al controllo controllo degli accessi nelle strutture dell'\entity{}. Si tratta di terminali Zucchetti
+
+\begin{center}
+\begin{longtable}{| p{3cm} | p{3cm} | p{3cm} | p{4cm} |}
+\caption{Terminali per la rilevazione presenze e controllo accessi}
+\label{sd-resources-presence-table}\\
+\hline
+\multicolumn{1}{| c |}{\textbf{Lettore}} & \multicolumn{1}{| c |}{\textbf{Modello}} & \multicolumn{1}{| c |}{\textbf{Presidio}} & \multicolumn{1}{| c |}{\textbf{Ubicazione}}\\
+\hline
+\endfirsthead
+\hline
+\multicolumn{1}{| c |}{\textbf{Lettore}} & \multicolumn{1}{| c |}{\textbf{Modello}} & \multicolumn{1}{| c |}{\textbf{Presidio}} & \multicolumn{1}{| c |}{\textbf{Ubicazione}}\\
+\hline
+\endhead
+\attribute{Lettore 1} & GONG P2 M & P. Ferrari & Pad. Principe\\
+\hline
+\attribute{Lettore 2} & GONG P2 M & P. Ferrari & Pad. Principe\\
+\hline
+\attribute{Lettore 3} & GONG P2 M & P. Ferrari & Dir. Sanitaria\\
+\hline
+\attribute{Lettore 4} & GONG P3 M & P. Ferrari & Palazzina Mensa\\
+\hline
+\attribute{Lettore 5} & GONG P3 M & P. Ferrari & Palazzina Mensa\\
+\hline
+\attribute{Lettore 6} & GONG P3 M & Via Isocrate & Ingresso\\
+\hline
+\attribute{Lettore 7} & GONG P3 M & Via Isocrate & Ambulatorio\\
+\hline
+\attribute{Lettore 8} & GONG P3 M & Via Isocrate & Mensa\\
+\hline
+\attribute{Lettore 9} & GONG P2 M & P. Ferrari & S. Sofia blocco A P.8\\
+\hline
+\attribute{Lettore 10} & GONG P2 M & P. Ferrari & S. Sofia blocco A P.8\\
+\hline
+\attribute{Lettore 11} & GONG P2 M & P. Ferrari & Corrid. Alpa\\
+\hline
+\attribute{Lettore C. Accesso} & UGONGT3NM & P. Ferrari & Blocco operatorio\\
+\hline
+\attribute{Lettore C. Accesso} & GONG TA M & P. Ferrari & Blocco operatorio\\
+\hline
+\end{longtable}
+\end{center}
+
 \subsection[Infrastruttura tecnologica]{infrastruttura tecnologica}
 \label{sd-resources-technology}
 Nella tabella \ref{sd-resources-technology-services-table} sono rappresentati i servizi di infrastruttura utilizzati all'interno dell'\entity{}.
@@ -478,6 +521,103 @@ Le risorse umane attualmente aventi un ruolo occupazionale all'interno dell'\ent
 \attribute{amministrativo} & dirigente amministrativo - direttore & \multicolumn{1}{| c |}{\num{7}}\\
 \hline
 & \textbf{TOTALE} & \multicolumn{1}{| c |}{\textbf{802}}\\
+\hline
+\end{longtable}
+\end{center}
+
+\subsection[Contratti in essere]{contratti in essere}
+\label{sd-resources-contract}
+Nella Tabella \ref{sd-resources-contract-table} sono elencati in contratti in essere ed i fornitori \acs{Information-Technology} al momento della partecipazione alla gara d'appalto.
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{3cm} | p{5cm} |}
+\caption{Contratti in essere}
+\label{sd-resources-contract-table}\\
+\hline
+\multicolumn{1}{| c |}{\textbf{Fornitore}} & \multicolumn{1}{| c |}{\textbf{Produttore}} & \multicolumn{1}{| c |}{\textbf{Descrizione}}\\
+\hline
+\endfirsthead
+\hline
+\multicolumn{1}{| c |}{\textbf{Fornitore}} & \multicolumn{1}{| c |}{\textbf{Produttore}} & \multicolumn{1}{| c |}{\textbf{Descrizione}}\\
+\hline
+\endfirsthead
+\multicolumn{3}{| c |}{\attribute{sistemi}}\\
+\hline
+\multicolumn{3}{| c |}{\textsf{area amministrativa}}\\
+\hline
+\attribute{enco} & ENCO & Gestione amministrativa e \english{software} per l'elaborazione CET regionale.\\
+\hline
+\attribute{windex} & WINDEX & Sistema ALISEO per la gestione del personale.\\
+\hline
+\attribute{Zucchetti} & & \english{Software} per il controllo degli accessi e lettori \english{badge} per la gestione delle presenze.\\
+\hline
+\attribute{beta 80} & BETA 80 & Gestione PROTOCOLLO.\\
+\hline
+\multicolumn{3}{| c |}{\textsf{area sanitaria clinica}}\\
+\hline
+\attribute{siemens} & SIEMENS & Sistema sanitario GST e AURORA WEB (comprendente di nr. 2 tecnici a presidio e Help Desk H24) comprende assistenza su \english{software} ESSEGI per la gestione dell'archivio clinico.\\
+\hline
+\attribute{3m} & 3M & \english{Grouper} per il calcolo DRG.\\
+\hline
+\attribute{dedalus} & SYNAPSIS & Valorizzazione DRG per \english{reporting}, verifica flussi ambulatoriali.\\
+\hline
+\attribute{noemalife} & EX UNITECH & POWERLAB - laboratorio d'analisi.\\
+\hline
+\attribute{metafora} & METAFORA & ARMONIA - anatomia patologica\\
+\hline
+\attribute{insiel} & INSIEL & EMONET - emotrasfusionale.\\
+\hline
+\attribute{avelco} & AVELCO & Verbale operatorio.\\
+\hline
+\multicolumn{3}{| c |}{\textsf{area direzionale}}\\
+\hline
+\multirow{2}{*}{\attribute{young \& young}} & \multirow{2}{*}{YOUNG \& YOUNG} & Assistenza sistema RAP.\\ \cline{3-3}
+ & & Attività per l'elaborazione e rappresentazione di dati economici.\\
+\hline
+\multicolumn{3}{| c |}{\textsf{servici di infrastruttura di base}}\\
+\hline
+\attribute{see} & & Realizzazione e gestione sito \english{intranet}.\\
+\hline
+\attribute{studio Paola Gemelli} & & Realizzazione e gestione sito \english{intranet}.\\
+\hline
+\attribute{sylicon graphics} & SYLICON GRAPHICS & Manutenzione \english{server} e \english{software} di base.\\
+\hline
+\attribute{nordcom} & & \english{Provider} servizi SISS.\\
+\hline
+\attribute{oracle} & ORACLE & Servizi di consulenza specialistica.\\
+\hline
+\attribute{c.h. ostfeld} & & Licenze \english{software} ``PENTA ZIP''.\\
+\hline
+\attribute{enterprise technology software} & & Licenze \english{software} per \english{desktop} remoto.\\
+\hline
+\multicolumn{3}{| c |}{\textsf{servizi}}\\
+\hline
+\attribute{ecocomputer} & & \english{Help Desk} e gestione postazione di lavoro (manutenzione, assistenza) e \english{server}.\\
+\hline
+\multirow{2}{*}{\attribute{pma}} & & Manutenzione apparati di rete c/o sede.\\ \cline{2-3}
+ & & Manutenzione apparati di rete c/o Via Isocrate.\\
+\hline
+\multirow{3}{*}{\attribute{rdz sistemi}} & & Gestione sistemi (\english{software} di base \english{server}, configurazione, sicurezza, dominio, \english{backup}, ecc.).\\ \cline{2-3}
+& & Amministratore sistemi e rete (ruolo SISS).\\ \cline{2-3}
+& & \english{Manager} sicurezza (ruolo SISS).\\
+\hline
+\attribute{pms italia} & & Consulenza, coordinamento operativo e DB admin.\\
+\hline
+\multicolumn{3}{| c |}{\textsf{altri sistemi presenti ma non inclusi nella gara}}\\
+\hline
+\attribute{agfa} & AGFA & RIP/PACS sede centrale.\\
+\hline
+\attribute{fuji} & FUJI & PACS del presidio di Via Isocrate.\\
+\hline
+\attribute{santer} & SANTER & ``Piattaforma Regionale'' per il SISS. (anagrafe, \english{repository}, \english{middleware}, ecc.)\\
+\hline
+\attribute{immagini computer} & & Manutenzione istocitomorfometro di anatomia patologica.\\
+\hline
+\attribute{reggiani} & & Manutenzione \english{software} e \english{scanner} c/o ANESTESIA per riconoscimento schede anestesiologiche.\\
+\hline
+\attribute{systema} & AUTODESK & Manutenzione licenze AUTOCAD per l'ufficio tecnico.\\
+\hline
+\attribute{banca intesa S. Paolo} & & Manutenzione PUNTI GIALLI per pagamento prestazioni.\\
 \hline
 \end{longtable}
 \end{center}

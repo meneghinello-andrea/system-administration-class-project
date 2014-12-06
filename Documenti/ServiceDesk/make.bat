@@ -27,4 +27,3 @@ pdflatex Master.tex
 makeglossaries Master
 pdflatex Master.tex
 pdflatex Master.tex
-pdflatex Master.tex

@@ -1,0 +1,301 @@
+%------------------------------------------------
+%
+% Input_output.tex 
+%
+% This section introduces the incident management
+% process.
+%------------------------------------------------
+\section[Input e output del processo]{input e output del processo}
+\label{im-io}
+In questa sezione vengono illustrati gli \english{input} e gli \english{output} del processo, specificando da chi sono ricevuti e a chi sono rivolti.
+
+\subsection[Input del processo]{input del processo}
+\label{im-io-input}
+In Tabella \ref{im-io-input-table} sono illustrati gli \english{input} del processo e da chi sono ricevuti.
+
+\begin{center}
+\begin{longtable}{| p{8cm} | p{4cm} |}
+\caption{Input del processo}
+\label{im-io-input-table}\\
+\hline
+\multicolumn{1}{| c |}{\textbf{Input}} & \multicolumn{1}{| c |}{\textbf{Da}}\\
+\hline
+\endfirsthead
+\hline
+\multicolumn{1}{| c |}{\textbf{Input}} & \multicolumn{1}{| c |}{\textbf{Da}}\\
+\hline
+\endhead
+Incidente (scritto) & Utenti\\
+\hline
+Soluzione a problemi & Processo di \acf{Problem-Management}\\
+\hline
+Risposta a richieste di cambiamento & Processo di \acf{Change-Management}\\
+\hline
+\end{longtable}
+\end{center}
+
+Gli \english{input} che esso riceve avvengono tramite quello che viene definito come \english{ticket}, che nasce generalmente con un incidente, prosegue con un problema ed infine diventa un errore. Viene manipolato da personale differente in momenti diversi, per maggiori dettagli vedere le attività di processo (Sezione REF).
+
+I campi e gli attributi che compongono un \english{ticket} sono illustrati REF in cui valgono le seguenti definizioni:
+
+\begin{itemize}
+\item{\attribute{sola lettura}: nessun dato può essere inserito in questo campo;}
+\item{\attribute{auto generato}: i dati di questo campo sono inseriti automaticamente dal sistema;}
+\item{\attribute{casella di controllo}: una casella che se cliccata abilita la visione della sezione associata (\english{checkbox});}
+\item{\attribute{collegamento}: il campo prevede la presenza di un controllo cliccabile che conduce l'operatore nella banca dati in cui può selezionare il valore corretto per popolare parte dei campi del \english{ticket};}
+\item{\attribute{risposta}: campo in cui l'utente può inserire testo a piacere (una sola riga);}
+\item{\attribute{risposta aperta}: campo in cui l'utente può inserire testo a piacere (più righe);}
+\item{\attribute{data}: campo in cui è presente un dato in formato data;}
+\item{\attribute{lista}: consente all'utente di scegliere un valore da una lista di valori predefinita.}
+\end{itemize}
+
+\begin{center}
+\begin{longtable}{| p{3cm} | p{6.5cm} | p{3cm} |}
+\caption{Informazioni di base di un \english{ticket}}
+\label{im-io-input-ticket-common-table}\\
+\hline
+\multicolumn{1}{| c |}{\textbf{Campo}} & \multicolumn{1}{| c |}{\textbf{Descrizione}} & \multicolumn{1}{| c |}{\textbf{Tipo di campo}}\\
+\endfirsthead
+\hline
+\multicolumn{1}{| c |}{\textbf{Campo}} & \multicolumn{1}{| c |}{\textbf{Descrizione}} & \multicolumn{1}{| c |}{\textbf{Tipo di campo}}\\
+\endhead
+\hline
+\multicolumn{3}{| c |}{\textit{sezione di sistema}}\\
+\hline
+\english{Ticket} ID & Numero identificativo incrementale del \english{ticket}. Per evitare il problema dell'\glossarySingolarTerm{overflow} dovuto ad un alto numero di richieste in ingresso il campo assume il seguente formato \attribute{yyyymmdd-xxxxx}, dove il prefisso rappresenta il giorno in cui il \english{ticket} è giunto al processo tramite la funzione di \english{Service Desk} mentre il suffisso rappresenta un numero incrementale che si azzera ogni giorno solare. Questa scelta consente di raggiungere un tetto massimo di \num{99999} \english{ticket} giornalieri. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+\multicolumn{3}{| c |}{\textit{sezione utente}}\\
+\hline
+Seleziona & Abilita il responsabile del \english{ticket} a selezionare, dal \english{database}, i dati l'utente che ha necessità di assistenza. & \attribute{collegamento}\\
+\hline
+Cognome & Cognome dell'utente che ha necessità di assistenza. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Nome & Nome dell'utente che ha necessità di assistenza. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Identificativo & Codice identificativo dell'utente che ha necessità di assistenza. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+E-mail & Indirizzo e-mail con cui è possibile contattare l'utente della richiesta. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Telefono & Numero di telefono con cui è possibile contattare l'utente della richiesta. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Interno & Numero dell'interno dell'utente della richiesta. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+FAX & Numero di FAX dell'utente oppure del dipartimento in cui risiede. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Numero stanza & Numero dell'ufficio dell'utente. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Piano & Numero del piano in cui si trova l'ufficio dell'utente. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Utente critico & Questa casella di controllo, se abilitata, indica che l'utente della richiesta ha una maggior priorità sugli altri e necessità di un servizio più tempestivo. & \attribute{casella di controllo} -- \attribute{auto generato}\\
+\hline
+\multicolumn{3}{| c |}{\textit{sezione referente}}\\
+\hline
+Seleziona & Abilita il responsabile del \english{ticket} a selezionare, dal \english{database}, i dati del referente dell'utente che ha comunicato il disservizio. & \attribute{collegamento}\\
+\hline
+Cognome & Nome del referente dell'utente che ha riportato la richiesta. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Nome & Cognome del referente dell'utente che ha riportato la richiesta. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Telefono & Numero di telefono del referente che ha riportato la richiesta. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Interno & Numero dell'interno del referente che ha riportato la richiesta. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+FAX & Numero di FAX dell'utente che ha riportato la richiesta o del dipartimento in cui risiede. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Numero stanza & Numero dell'ufficio dell'utente. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Piano & Numero del piano in cui si trova l'ufficio dell'utente. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+\multicolumn{3}{| c |}{\textit{sezione tecnica}}\\
+\hline
+Stato & Stato in cui si trova il \english{ticket}. Vedi Sezione \ref{prc-incident-status}. & \attribute{lista}\\
+\hline
+Responsabile & Responsabile della gestione del \english{ticket}. Inizialmente è popolato dall'operatore che risponde alla richiesta, tuttavia, può essere sempre modificato se il suo responsabile, per qualsiasi motivo, cambia. Il responsabile può essere solo un membro attivo del \english{Service Desk}. & \attribute{collegamento}\\
+\hline
+Tipo & Specifica la tipologia di \english{ticket}. (vedi Sezione \ref{prc-incident-category} per maggiori dettagli) & \attribute{lista}\\
+\hline
+Categoria & Specifica la categoria presso cui si colloca il \english{ticket}. (vedi Sezione \ref{prc-incident-category} per maggiori dettagli). & \attribute{lista}\\
+\hline
+Prodotto & Specifica il prodotto che è affetto dall'anomalia. & \attribute{lista}\\
+\hline
+Impatto & Specifica l'impatto che ha per il \english{business} l'incidente. L'impatto è definito su una scala da \num{1} a \num{5} dove uno significa ``non grave'' mentre cinque significa ``grave''. & \attribute{lista}\\
+\hline
+Urgenza & Specifica l'urgenza nella risoluzione dell'incidente. & \attribute{lista}\\
+\hline
+Priorità & La priorità è definita dallo sforzo/impegno necessario alla risoluzione del \english{ticket}. & \attribute{lista}\\
+\hline
+\ac{Service-Level-Agreement} & Accordo sul livello di servizio concordato. & \attribute{collegamento}\\
+\hline
+\multicolumn{3}{| c |}{\textit{sezione \ac{Configuration-Item}}}\\
+\hline
+Identificativo & L'identificativo del \ac{Configuration-Item} coinvolto nell'incidente. & \attribute{collegamento}\\
+\hline
+Tipo & Indica la tipologia di \ac{Configuration-Item} (\english{hardware}, \english{software}, stampante, ecc.) & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Modello & Modello del \ac{Configuration-Item} & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+\multicolumn{3}{| c |}{\textit{sezione livello di supporto di grado superiore}}\\
+\hline
+Gruppo & Indice la seconda linea di supporto a cui il \english{ticket} può essere riassegnato in caso di necessità. & \attribute{collegamento}\\
+\hline
+Responsabile & Membro del gruppo della seconda linea di supporto responsabile del \english{ticket}. & \attribute{colleagmento}\\
+\hline
+Telefono & Numero di telefono per contattare il responsabile del \english{ticket} nella seconda linea di supporto. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+\end{longtable}
+\end{center}
+
+I successivi campi rappresentano le informazioni riguardanti l'incidente che sono disponibili a seguito di una analisi tecnica.
+
+Se le cause scatenanti dell'incidente a cui si riferisce il \english{ticket} sono multiple, allora i seguenti campi sono ripetuti tante volte quante sono le cause.
+
+Oppure se la risoluzione dell'incidente presenta difficoltà ripetendo i seguenti campi è possibile tracciare la cronistoria del processo.
+
+\begin{center}
+\begin{longtable}{| p{3cm} | p{6.5cm} | p{3cm} |}
+\caption{Informazioni di aggiornamento del \english{ticket}}
+\label{im-io-input-ticket-upgrade-table}\\
+\hline
+\multicolumn{1}{| c |}{\textbf{Campo}} & \multicolumn{1}{| c |}{\textbf{Descrizione}} & \multicolumn{1}{| c |}{\textbf{Tipo di campo}}\\
+\endfirsthead
+\hline
+\multicolumn{1}{| c |}{\textbf{Campo}} & \multicolumn{1}{| c |}{\textbf{Descrizione}} & \multicolumn{1}{| c |}{\textbf{Tipo di campo}}\\
+\endhead
+\hline
+\multicolumn{3}{| c |}{\textit{sezione cause}}\\
+\hline
+ID Causa & Il codice identificativo della causa dell'incidente. Può cambiare durante il ciclo di vita del \english{ticket}. & \attribute{lista}\\
+\hline
+Descrizione breve & Fornisce una breve descrizione delle cause dell'incidente. & \attribute{risposta}\\
+\hline
+Descrizione & Fornisce una descrizione completa delle cause dell'incidente. & \attribute{risposta aperta}\\
+\hline
+\multicolumn{3}{| c |}{\textit{sezione di sistema}}\\
+\hline
+Aggiornato il & Data di aggiornamento del \english{ticket}. & \attribute{data} -- \attribute{auto generato}\\
+\hline
+\end{longtable}
+\end{center}
+
+Il \english{software} a sostegno delle attività di processo (vedi Sezione \ref{sd-tools}) fornisce degli strumenti che consentono ai membri dello staff di associare altri \english{ticket} a quello in lavorazione.
+
+L'associazione è fatta in automatico e quando l'associazione avviene vedremo questo informazioni nel \english{ticket} dell'incidente corrente.
+
+\begin{center}
+\begin{longtable}{| p{3cm} | p{6.5cm} | p{3cm} |}
+\caption{Informazioni da altri documenti interni}
+\label{im-io-input-ticket-attachment-table}\\
+\hline
+\multicolumn{1}{| c |}{\textbf{Campo}} & \multicolumn{1}{| c |}{\textbf{Descrizione}} & \multicolumn{1}{| c |}{\textbf{Tipo di campo}}\\
+\endfirsthead
+\hline
+\multicolumn{1}{| c |}{\textbf{Campo}} & \multicolumn{1}{| c |}{\textbf{Descrizione}} & \multicolumn{1}{| c |}{\textbf{Tipo di campo}}\\
+\endhead
+\hline
+\multicolumn{3}{| c |}{\textit{sezione \english{ticket} collegato}}\\
+\hline
+ID incidente & Numero identificativo del \english{ticket} di riferimento. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Aperto il & Data di apertura del \english{ticket} di riferimento. & \attribute{data} -- \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Stato & Stato del \english{ticket} di riferimento. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Tipo & Tipologia del \english{ticket} di riferimento. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Categoria & Categoria del \english{ticket} di riferimento. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Descrizione breve & Descrizione breve dell'incidente a cui si riferisce il \english{ticket}. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+\multicolumn{3}{| c |}{\textit{sezione \english{problem} collegato}}\\
+\hline
+ID problema & Numero identificativo del problema di riferimento all'incidente. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Aperto il & Data di apertura del problema di riferimento. & \attribute{data} -- \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Stato & Stato del problema di riferimento. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Categoria & Categoria in cui risiede il problema di riferimento. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Descrizione breve & Breve descrizione del problema di riferimento. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+\multicolumn{3}{| c |}{\textit{sezione \english{known error} collegato}}\\
+\hline
+ID errore & Numero identificativo dell'errore collegato. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Aperto il & Data di apertura dell'errore di riferimento. & \attribute{data} -- \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Stato & Stato dell'errore di riferimento. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Categoria & Categoria dell'errore di riferimento. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Descrizione breve & Breve descrizione dell'errore di riferimento & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+\multicolumn{3}{| c |}{\textit{sezione \ac{Request-For-Change} collegata}}\\
+\hline
+\english{change} ID & Numero identificativo della \ac{Request-For-Change} di riferimento. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Categoria & Categoria in cui risiede la \ac{Request-For-Change} di riferimento. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Fase & Fase in cui risiede la \ac{Request-For-Change} di riferimento. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+\english{Asset} & \english{Asset} a cui si riferisce la \ac{Request-For-Change} di riferimento. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Descrizione breve & Breve descrizione della \ac{Request-For-Change} di riferimento. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Inizio pianificato il & Data di inizio pianificata per l'attuazione della modifica. & \attribute{data} -- \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Fine pianificata il & Data di fine pianificata per l'attuazione della modifica. & \attribute{data} -- \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+\end{longtable}
+\end{center}
+
+Quando il \english{ticket} viene risolto i seguenti campi sono popolati dal suo responsabile.
+
+\begin{center}
+\begin{longtable}{| p{3cm} | p{6.5cm} | p{3cm} |}
+\caption{Informazioni di risoluzione dell'incidente}
+\label{im-io-input-ticket-resolution-table}\\
+\hline
+\multicolumn{1}{| c |}{\textbf{Campo}} & \multicolumn{1}{| c |}{\textbf{Descrizione}} & \multicolumn{1}{| c |}{\textbf{Tipo di campo}}\\
+\endfirsthead
+\hline
+\multicolumn{1}{| c |}{\textbf{Campo}} & \multicolumn{1}{| c |}{\textbf{Descrizione}} & \multicolumn{1}{| c |}{\textbf{Tipo di campo}}\\
+\endhead
+\hline
+ID risoluzione & Numero identificativo della risoluzione dell'incidente. & \attribute{lista}\\
+\hline
+Descrizione breve & Descrizione breve della risoluzione. & \attribute{risposta}\\
+\hline
+Descrizione & Descrizione completa della risoluzione dell'incidente. & \attribute{risposta aperta}\\
+\hline
+\end{longtable}
+\end{center}
+
+\begin{center}
+\begin{longtable}{| p{3cm} | p{6.5cm} | p{3cm} |}
+\caption{Storico del \english{ticket}}
+\label{im-io-input-ticket-history-table}\\
+\hline
+\multicolumn{1}{| c |}{\textbf{Campo}} & \multicolumn{1}{| c |}{\textbf{Descrizione}} & \multicolumn{1}{| c |}{\textbf{Tipo di campo}}\\
+\endfirsthead
+\hline
+\multicolumn{1}{| c |}{\textbf{Campo}} & \multicolumn{1}{| c |}{\textbf{Descrizione}} & \multicolumn{1}{| c |}{\textbf{Tipo di campo}}\\
+\endhead
+\hline
+Aperto da & Cognome e nome dell'utente/cliente che ha aperto la richiesta di assistenza. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Aperto il & Data di apertura della richiesta da parte dell'utente/cliente. & \attribute{data} -- \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Aggiornato il & Data di aggiornamento della richiesta di assistenza. & \attribute{data} -- \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Risolto da & Cognome e nome del membro dello staff che ha risolto l'incidente. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Risolto il & Data di risoluzione dell'incidente. & \attribute{data} -- \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Chiuso da & Cognome e nome del membro dello staff che ha chiuso la richiesta dell'utente/cliente. & \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+Chiuso il & Data di chiusura e archiviazione della richiesta. & \attribute{data} -- \attribute{sola lettura} -- \attribute{auto generato}\\
+\hline
+\end{longtable}
+\end{center}
+

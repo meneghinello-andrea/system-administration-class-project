@@ -11,10 +11,10 @@ In questa sezione vengono illustrati gli \english{input} e gli \english{output} 
 
 \subsection[Input del processo]{input del processo}
 \label{im-io-input}
-In Tabella \ref{im-io-input-table} sono illustrati gli \english{input} del processo e da chi sono ricevuti.
+In Tabella \ref{im-io-input-table} sono elencati gli \english{input} del processo e da chi sono ricevuti.
 
 \begin{center}
-\begin{longtable}{| p{8cm} | p{4cm} |}
+\begin{longtable}{| p{6cm} | p{7cm} |}
 \caption{Input del processo}
 \label{im-io-input-table}\\
 \hline
@@ -34,9 +34,11 @@ Risposta a richieste di cambiamento & Processo di \acf{Change-Management}\\
 \end{longtable}
 \end{center}
 
-Gli \english{input} che esso riceve avvengono tramite quello che viene definito come \english{ticket}, che nasce generalmente con un incidente, prosegue con un problema ed infine diventa un errore. Viene manipolato da personale differente in momenti diversi, per maggiori dettagli vedere le attività di processo (Sezione REF).
+Gli \english{input} che esso riceve avvengono tramite quello che viene definito come \english{\glossarySingolarTerm{ticket}}, che nasce generalmente con un incidente, prosegue con un problema ed infine diventa un errore.
 
-I campi e gli attributi che compongono un \english{ticket} sono illustrati REF in cui valgono le seguenti definizioni:
+Viene manipolato da personale differente in momenti diversi, per maggiori dettagli vedere le attività di processo (Sezione REF).
+
+I campi e gli attributi che compongono un \english{ticket} sono illustrati nelle Tabelle \ref{im-io-input-ticket-common-table}, \ref{im-io-input-ticket-upgrade-table}, \ref{im-io-input-ticket-attachment-table}, \ref{im-io-input-ticket-resolution-table} e \ref{im-io-input-ticket-history-table} in cui valgono le seguenti definizioni:
 
 \begin{itemize}
 \item{\attribute{sola lettura}: nessun dato può essere inserito in questo campo;}
@@ -48,6 +50,8 @@ I campi e gli attributi che compongono un \english{ticket} sono illustrati REF i
 \item{\attribute{data}: campo in cui è presente un dato in formato data;}
 \item{\attribute{lista}: consente all'utente di scegliere un valore da una lista di valori predefinita.}
 \end{itemize}
+
+\clearpage{}
 
 \begin{center}
 \begin{longtable}{| p{3cm} | p{6.5cm} | p{3cm} |}
@@ -145,11 +149,11 @@ Telefono & Numero di telefono per contattare il responsabile del \english{ticket
 \end{longtable}
 \end{center}
 
-I successivi campi rappresentano le informazioni riguardanti l'incidente che sono disponibili a seguito di una analisi tecnica.
+I campi riportati in Tabella \ref{im-io-input-ticket-upgrade-table} rappresentano le informazioni riguardanti l'incidente che sono disponibili a seguito di una analisi tecnica.
 
 Se le cause scatenanti dell'incidente a cui si riferisce il \english{ticket} sono multiple, allora i seguenti campi sono ripetuti tante volte quante sono le cause.
 
-Oppure se la risoluzione dell'incidente presenta difficoltà ripetendo i seguenti campi è possibile tracciare la cronistoria del processo.
+Tramite i seguenti campi è possibile tracciare la cronistoria dell'incidente.
 
 \begin{center}
 \begin{longtable}{| p{3cm} | p{6.5cm} | p{3cm} |}
@@ -177,9 +181,9 @@ Aggiornato il & Data di aggiornamento del \english{ticket}. & \attribute{data} -
 \end{longtable}
 \end{center}
 
-Il \english{software} a sostegno delle attività di processo (vedi Sezione \ref{sd-tools}) fornisce degli strumenti che consentono ai membri dello staff di associare altri \english{ticket} a quello in lavorazione.
+Il \english{software} a sostegno delle attività di processo (vedi Sezione \ref{sd-tools}) fornisce degli strumenti che consentono ai membri dello staff di associare altri \english{ticket} a quello in lavorazione. Risulta utile quando il \english{ticket} attuale riguarda un incidente con somiglianze ad uno già presente nella banca dati.
 
-L'associazione è fatta in automatico e quando l'associazione avviene vedremo questo informazioni nel \english{ticket} dell'incidente corrente.
+L'associazione è fatta in automatico e quando l'associazione avviene vedremo aggiunti campi riportati in Tabella \ref{im-io-input-ticket-attachment-table}.
 
 \begin{center}
 \begin{longtable}{| p{3cm} | p{6.5cm} | p{3cm} |}
@@ -249,7 +253,7 @@ Fine pianificata il & Data di fine pianificata per l'attuazione della modifica. 
 \end{longtable}
 \end{center}
 
-Quando il \english{ticket} viene risolto i seguenti campi sono popolati dal suo responsabile.
+Quando il \english{ticket} viene risolto i campi riportati in Tabella \ref{im-io-input-ticket-resolution-table} sono popolati dal suo responsabile.
 
 \begin{center}
 \begin{longtable}{| p{3cm} | p{6.5cm} | p{3cm} |}
@@ -270,6 +274,8 @@ Descrizione & Descrizione completa della risoluzione dell'incidente. & \attribut
 \hline
 \end{longtable}
 \end{center}
+
+Il \english{software} propone una visione ridotta del \english{ticket} in cui vediamo la cronistoria. I campi visualizzati sono elencati in Tabella \ref{im-io-input-ticket-history-table}.
 
 \begin{center}
 \begin{longtable}{| p{3cm} | p{6.5cm} | p{3cm} |}
@@ -299,3 +305,23 @@ Chiuso il & Data di chiusura e archiviazione della richiesta. & \attribute{data}
 \end{longtable}
 \end{center}
 
+\subsection[Output del processo]{output del processo}
+\label{im-io-output}
+In Tabella \ref{im-io-output-table} sono elencati gli \english{output} del processo e a chi sono rivolti.
+
+\begin{center}
+\begin{longtable}{| p{6cm} | p{7cm} |}
+\caption{output del processo}
+\label{im-io-output-table}\\
+\hline
+\multicolumn{1}{| c |}{\textbf{Input}} & \multicolumn{1}{| c |}{\textbf{Da}}\\
+\hline
+\endfirsthead
+\hline
+\multicolumn{1}{| c |}{\textbf{Input}} & \multicolumn{1}{| c |}{\textbf{Da}}\\
+\hline
+\endhead
+Notifiche agli utenti quanto il \english{ticket} cambia di stato. & Utenti\\
+\hline
+\end{longtable}
+\end{center}

@@ -34,11 +34,11 @@ Risposta a richieste di cambiamento & Processo di \acf{Change-Management}\\
 \end{longtable}
 \end{center}
 
-Gli \english{input} che esso riceve avvengono tramite quello che viene definito come \english{\glossarySingolarTerm{ticket}}, che nasce generalmente con un incidente, prosegue con un problema ed infine diventa un errore.
+Gli \english{input} che esso riceve avvengono tramite \english{ticket}, che nasce generalmente con un incidente, prosegue con un problema ed infine diventa un errore.
 
-Viene manipolato da personale differente in momenti diversi, per maggiori dettagli vedere le attività di processo (Sezione REF).
+Il \english{ticket} viene manipolato da personale differente in momenti diversi, per maggiori dettagli vedere le attività di processo (Sezione \ref{im-flow}).
 
-I campi e gli attributi che compongono un \english{ticket} sono illustrati nelle Tabelle \ref{im-io-input-ticket-common-table}, \ref{im-io-input-ticket-upgrade-table}, \ref{im-io-input-ticket-attachment-table}, \ref{im-io-input-ticket-resolution-table} e \ref{im-io-input-ticket-history-table} in cui valgono le seguenti definizioni:
+I campi e gli attributi che lo compongono sono illustrati nelle Tabelle \ref{im-io-input-ticket-common-table}, \ref{im-io-input-ticket-upgrade-table}, \ref{im-io-input-ticket-attachment-table}, \ref{im-io-input-ticket-resolution-table} e \ref{im-io-input-ticket-history-table} in cui valgono le seguenti definizioni:
 
 \begin{itemize}
 \item{\attribute{sola lettura}: nessun dato può essere inserito in questo campo;}
@@ -112,13 +112,13 @@ Piano & Numero del piano in cui si trova l'ufficio dell'utente. & \attribute{sol
 \hline
 \multicolumn{3}{| c |}{\textit{sezione tecnica}}\\
 \hline
-Stato & Stato in cui si trova il \english{ticket}. Vedi Sezione \ref{prc-incident-status}. & \attribute{lista}\\
+Stato & Stato in cui si trova il \english{ticket}. I possibili stati sono: \attribute{aperto - in carico - in risoluzione - risolto - chiuso}. & \attribute{lista}\\
 \hline
 Responsabile & Responsabile della gestione del \english{ticket}. Inizialmente è popolato dall'operatore che risponde alla richiesta, tuttavia, può essere sempre modificato se il suo responsabile, per qualsiasi motivo, cambia. Il responsabile può essere solo un membro attivo del \english{Service Desk}. & \attribute{collegamento}\\
 \hline
-Tipo & Specifica la tipologia di \english{ticket}. (vedi Sezione \ref{prc-incident-category} per maggiori dettagli) & \attribute{lista}\\
+Tipo & Specifica la tipologia di \english{ticket}. (\attribute{richiesta di servizio - incidente}) & \attribute{lista}\\
 \hline
-Categoria & Specifica la categoria presso cui si colloca il \english{ticket}. (vedi Sezione \ref{im-management-categorization} per maggiori dettagli). & \attribute{lista}\\
+Categoria & Specifica la categoria presso cui si colloca il \english{ticket}. (vedi Sezione \ref{im-management-classification} per maggiori dettagli). & \attribute{lista}\\
 \hline
 Prodotto & Specifica il prodotto che è affetto dall'anomalia. & \attribute{lista}\\
 \hline
@@ -183,7 +183,7 @@ Aggiornato il & Data di aggiornamento del \english{ticket}. & \attribute{data} -
 
 Il \english{software} a sostegno delle attività di processo (vedi Sezione \ref{sd-tools}) fornisce degli strumenti che consentono ai membri dello staff di associare altri \english{ticket} a quello in lavorazione. Risulta utile quando il \english{ticket} attuale riguarda un incidente con somiglianze ad uno già presente nella banca dati.
 
-L'associazione è fatta in automatico e quando l'associazione avviene vedremo aggiunti campi riportati in Tabella \ref{im-io-input-ticket-attachment-table}.
+L'associazione è fatta in automatico e quando l'associazione avviene saranno aggiunti i campi riportati in Tabella \ref{im-io-input-ticket-attachment-table}.
 
 \begin{center}
 \begin{longtable}{| p{3cm} | p{6.5cm} | p{3cm} |}
@@ -275,7 +275,7 @@ Descrizione & Descrizione completa della risoluzione dell'incidente. & \attribut
 \end{longtable}
 \end{center}
 
-Il \english{software} propone una visione ridotta del \english{ticket} in cui vediamo la cronistoria. I campi visualizzati sono elencati in Tabella \ref{im-io-input-ticket-history-table}.
+Il \english{software} propone una visione ridotta del \english{ticket} in cui si vedrà la cronistoria. I campi visualizzati sono elencati in Tabella \ref{im-io-input-ticket-history-table}.
 
 \begin{center}
 \begin{longtable}{| p{3cm} | p{6.5cm} | p{3cm} |}

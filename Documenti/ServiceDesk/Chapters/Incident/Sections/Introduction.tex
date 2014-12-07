@@ -13,7 +13,7 @@ Il processo fornisce un metodo coerente che gli utenti devono seguire in caso di
 
 \subsection[Scopo principale]{scopo principale}
 \label{im-introduction-scope}
-Lo scopo principale del processo di \ac{Incident-Management} è quello di \keyword{ripristinare il funzionamento normale dei servizi il più rapidamente possibile} e \keyword{ridurre al minimo l'impatto negativo} sulle operazioni di \english{business}, garantendo cosi che i migliori livelli possibili di \keyword{qualità del servizio} e \keyword{disponibilità} siano mantenuti.
+Lo scopo principale del processo di \ac{Incident-Management} è quello di \keyword{ripristinare il funzionamento normale dei servizi il più rapidamente possibile} e \keyword{ridurre al minimo l'impatto negativo} sulle operazioni di \english{business}, garantendo così che i migliori livelli possibili di \keyword{qualità del servizio} e \keyword{disponibilità} siano mantenuti.
 
 \attribute{nota}: attraverso la dicitura ``normale funzionamento del servizio'' si intende quando un servizio sta operando all'interno dei limiti imposti dallo \ac{Service-Level-Agreement}.
 
@@ -28,24 +28,24 @@ Vengono escluse da questo processo:
 
 \subsection[Definizione di processo]{definizione di processo}
 \label{im-introduction-definition}
-Questo processo include qualsiasi evento che sconvolge, o che potrebbe interrompere un servizio. Include inoltre gli eventi che vengono comunicati direttamente dagli utenti attraverso la funzione di \english{Service Desk} oppure attraverso un'interfaccia interrogabile dal processo di \ac{Event-Management} verso lo strumento a supporto delle attività di processo.
+Questo processo include qualsiasi evento che innesca comportamenti anomali, o che potrebbe interrompere un servizio. Include inoltre gli eventi che vengono comunicati direttamente dagli utenti attraverso la funzione di \english{Service Desk} oppure attraverso un'interfaccia interrogabile dal processo di \ac{Event-Management} verso lo strumento a supporto delle attività di processo.
 
 \subsection[Obiettivi]{obiettivi}
 \label{im-introduction-objectives}
 Il processo possiede i seguenti \keyword{obiettivi}:
 
 \begin{itemize}
-\item{gli incidenti siano propriamente registrati;}
-\item{gli incidenti siano propriamente instradati;}
-\item{lo stato di ogni incidenti sia segnalato con precisione;}
-\item{la coda degli incidenti non ancora risolti sia visibile e segnalata;}
-\item{gli incidenti siano propriamente corredati di priorità e gestiti nella sequenza corretta;}
+\item{gli incidenti devono essere propriamente registrati;}
+\item{gli incidenti devono essere propriamente instradati;}
+\item{lo stato di ogni incidente deve essere segnalato con precisione;}
+\item{la coda degli incidenti non ancora risolti deve essere visibile e segnalata;}
+\item{gli incidenti devono essere propriamente corredati di priorità e gestiti nella sequenza corretta;}
 \item{la risoluzione fornita deve soddisfare i requisiti dello \ac{Service-Level-Agreement}.}
 \end{itemize}
 
 \subsection[Definizioni]{definizioni}
 \label{im-introduction-definitions}
-In questa sezione sono fornite brevi definizioni dei termini utilizzati nel resto del capitolo.
+In questa sezione seguono brevi definizioni e precisazioni riguardo i termini utilizzati nel contesto del processo di \ac{Incident-Management}. Questi termini sono qui esplicitati al fine di garantire chiarezza nella comprensione dei contenuti nelle sezioni seguenti.
 
 \subsubsection{impatto}
 L'impatto è determinato attraverso il numero di utenti o funzioni che sono affette dall'incidente. Il proponente definisce tre gradi di impatto per l'\entity{} illustrati in Tabella \ref{im-introduction-definition-impact-table}.
@@ -76,9 +76,9 @@ L'impatto di un incidente viene utilizzato nel calcolo della sua priorità.
 \subsubsection{incidente}
 Un incidente è una interruzione non pianificata di un servizio \acs{Information-Technology} o una riduzione della qualità di un servizio \acs{Information-Technology}.
 
-E' considerato incidente anche il fallimento di un qualsiasi prodotto, \english{software} o \english{hardware}, utilizzato nel supporto di un sistema che non è ancora interessato dall'anomalia. Ad esempio il guasto di un componente di una configurazione ad elevata disponibilità ridondante è un incidente anche se non interrompe il servizio offerto.
+E' considerato incidente anche il fallimento di un qualsiasi prodotto, \english{software} o \english{hardware}, utilizzato nel supporto di un sistema che non è ancora interessato dall'anomalia (ad esempio il guasto di un componente di una configurazione ad elevata disponibilità ridondante è un incidente anche se non interrompe il servizio offerto).
 
-E' importante osservare che un difetto di produzione o progettazione non è un incidente. Se il prodotto funziona come progettato, ma la progettazione risulta essere errata la correzione deve assumere la forma di un richiesta di servizio che ha un ciclo di vita differente (vedi Capitolo REF).
+Si noti che un difetto di produzione o progettazione non è un incidente. Se il prodotto funziona come progettato, ma la progettazione risulta essere errata la correzione deve assumere la forma di un richiesta di servizio che ha un ciclo di vita differente (vedi Capitolo REF).
 
 \subsubsection{incidente utente}
 Questa tipologia contiene gli incidenti che sono maggiormente incontrati dagli utenti durante il normale utilizzo dei servizi \acs{Information-Technology}. Possono riguardare sia le applicazioni che l'\english{hardware} che essi utilizzano.
@@ -90,13 +90,13 @@ Questa tipologia contiene incidenti che possono accadere senza che l'utente ne s
 L'\english{incident repository} è un \english{database} logico contenente le informazioni rilevanti su tutti gli incidenti riscontrati, risolti o ancora pendenti.
 
 \subsubsection{priorità}
-La priorità di un incidente viene determinata utilizzando una combinazione di impatto e severità. Per una spiegazione completa fare riferimento alla Sezione REF.
+La priorità di un incidente viene determinata utilizzando una combinazione di impatto e severità. Per una spiegazione completa fare riferimento alla Sezione \ref{im-management-priority}.
 
 \subsubsection{risposta}
 Tempo trascorso tra il momento in cui l'incidente è segnalato e quando viene assegnato ad un membro dello staff del \english{Service Desk} per la sua risoluzione.
 
 \subsubsection{risoluzione}
-Il servizio è riportato in uno stato coerente con le specifiche dello \ac{Service-Level-Agreement}. In alcuni casi però, il servizio pur ritornando ad essere operativo presenta un livello di servizio inferiore a quanto stabilito ma consente comunque all'utente di tornare ad essere operativo nel mentre viene ricercato e risolto il problema.
+Il servizio è riportato in uno stato coerente con le specifiche dello \ac{Service-Level-Agreement}. In alcuni casi però, il servizio pur ritornando ad essere operativo presenta un livello di servizio inferiore a quanto stabilito ma consente comunque all'utente di tornare ad essere operativo finché il problema viene ricercato e risolto.
 
 \subsubsection{Gravità}
 La gravità di un incidente viene determinata sulla base di quanto l'utente è limitato nello svolgere le proprie mansioni. Il proponente definisce tre gradi di gravità per l'\entity{} illustrati in Tabella \ref{im-introduction-definition-severity-table}.

@@ -1,0 +1,106 @@
+%------------------------------------------------
+%
+% Incident_Management.tex 
+%
+% This section introduces the incident management
+%------------------------------------------------
+\section[Gestione di incidenti]{gestione di incidenti}
+\label{im-management}
+Al fine di determinare se gli \ac{Service-Level-Agreement} relativi al processo di \ac{Incident-Management} sono soddisfatti è necessario classificare correttamente e fornire la giusta priorità agli incidenti il più rapidamente possibile.
+
+\subsection[Categorizzazione]{categorizzazione}
+\label{im-management-categorization}
+Gli obiettivi di una corretta categorizzazione degli incidenti sono:
+
+\begin{itemize}
+\item{identificare il servizio impattato e le scadenze specifiche;}
+\item{identificare quali gruppi di sostegno devono essere coinvolti.}
+\end{itemize}
+
+Per ogni incidente lo specifico servizio (come pubblicato nel \english{Service Catalogue}) deve essere identificato. E' necessario inoltre stabilire con l'utente quale specifica area del servizio è soggetta dell'anomalia.
+
+E' necessario inoltre stabilire la \keyword{gravità} e l'\keyword{impatto} dell'incidente, perché tutti gli incidenti sono importanti per l'utente ma incidenti che affliggono numerosi gruppi di persone o funzioni \english{mission critical} devono essere affrontati per primi.
+
+\subsection[Priorità]{priorità}
+\label{im-management-priority}
+La priorità data ad un incidente determina quanto velocemente si dovrà fornire una risoluzione, essa è determinata in base alla gravità ed all'impatto che esso possiede.
+
+In Tabella \ref{im-management-priority-table} è fornita una mappa che dovrà essere utilizzata dallo staff tecnico per determinare la priorità di ogni \english{ticket}.
+
+\begin{center}
+\begin{longtable}{ m{2cm} m{2cm} m{2cm} | m{2cm} | m{2cm} | m{2cm} |}
+\caption{Calcolo della priorità di un ticket}
+\label{im-management-priority-table}\\
+\cline{4-6}
+&
+&
+&
+\multicolumn{3}{| c |}{\textbf{Gravità}}\\
+\cline{4-6}
+&
+&
+&
+\multicolumn{1}{| c}{3 - BASSO} &
+\multicolumn{1}{| c}{2 - MEDIO} &
+\multicolumn{1}{| c |}{1 - ALTO}\\
+\cline{4-6}
+&
+&
+&
+L'incidente impedisce all'utente di svolgere parte delle mansioni. &
+L'incidente impedisce all'utente di svolgere funzioni sensibili in un momento critico. &
+L'incidente affligge un intero servizio o la maggior parte di esso.\\
+\hline
+\multicolumn{1}{| c }{\textbf{Impatto}} &
+\multicolumn{1}{| m{2cm}}{3 - BASSO} &
+\multicolumn{1}{| m{2cm} |}{L'incidente affligge un massimo di due o tre utenti. Il servizio è degradato, ma ancora operativo nei termini dello \ac{Service-Level-Agreement}.} &
+3 - BASSO &
+3 - BASSO &
+2 - MEDIO\\ 
+\hline
+\multicolumn{1}{| c }{\textbf{Impatto}} &
+\multicolumn{1}{| m{2cm}}{2 - MEDIO} &
+\multicolumn{1}{| m{2cm} |}{Molteplici utenti in uno stesso reparto sono affetti dall'incidente. Il servizio è degradato e ancora funzionante, ma non operativo nelle specifiche dello \ac{Service-Level-Agreement}.} &
+2 - MEDIO &
+2 - MEDIO &
+1 - ALTO\\
+\hline
+\hline
+\multicolumn{1}{| c }{\textbf{Impatto}} &
+\multicolumn{1}{| m{2cm}}{1 - ALTO} &
+\multicolumn{1}{| m{2cm} |}{Tutti gli utenti di un servizio sono affetti dall'incidente. Il servizio non è più operativo.} &
+1 - ALTO &
+1 - ALTO &
+1 - ALTO\\
+\hline
+\end{longtable}
+\end{center}
+
+\subsection[Tempi di risposta e risoluzione]{tempi di risposta e risoluzione}
+\label{im-management-time}
+Il personale del \english{Service Desk} si impegna a seguire quanto riportato in Tabella \ref{im-management-time-table} per quanto concerne i tempi di risposta e di risoluzione alle richieste.
+
+\begin{center}
+\begin{longtable}{| p{4cm} | p{4cm} | p{4cm} |}
+\caption{Tempi di risposta e risoluzione}
+\label{im-management-time-table}\\
+\hline
+\multicolumn{1}{| c |}{\textbf{Priorità}} & \multicolumn{2}{| c |}{\textbf{Obiettivo}}\\
+\hline
+\endfirsthead
+\hline
+\multicolumn{1}{| c |}{\textbf{Priorità}} & \multicolumn{2}{| c |}{\textbf{Obiettivo}}\\
+\hline
+\endhead
+& \multicolumn{1}{| c |}{\textsc{Risposta}} & \multicolumn{1}{| c |}{\textsc{Risoluzione}}\\
+\hline
+3 - BASSO & 90\% - 24 ore & 90\% 7 giorni\\
+\hline
+2 - MEDIO & 90\% - 2 ore & 90\% 4 ore\\
+\hline
+3 - ALTO & 95\% - 15 minuti & 90\% - 2 ore\\
+\hline
+\end{longtable}
+\end{center}
+
+\attribute{nota}: si ricorda che i tempi sopra elencati sono da intendersi compatibilmente con i tempi di operatività del \english{Service Desk} (vedi Sezione \ref{sd-operativity-time}).

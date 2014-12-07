@@ -9,17 +9,40 @@
 Al fine di determinare se gli \ac{Service-Level-Agreement} relativi al processo di \ac{Incident-Management} sono soddisfatti è necessario classificare correttamente e fornire la giusta priorità agli incidenti il più rapidamente possibile.
 
 \subsection[Categorizzazione]{categorizzazione}
-\label{im-management-categorization}
-Gli obiettivi di una corretta categorizzazione degli incidenti sono:
+\label{im-management-classification}
+La categorizzazione è necessaria per determinare il supporto iniziale più corretto. Gli obiettivi di una corretta categorizzazione degli incidenti sono:
 
 \begin{itemize}
 \item{identificare il servizio impattato e le scadenze specifiche;}
 \item{identificare quali gruppi di sostegno devono essere coinvolti.}
 \end{itemize}
 
-Per ogni incidente lo specifico servizio (come pubblicato nel \english{Service Catalogue}) deve essere identificato. E' necessario inoltre stabilire con l'utente quale specifica area del servizio è soggetta dell'anomalia.
+La creazione di una \keyword{tassonomia} di classificazione non è compito del \english{software} a supporto della attività di processo ma di colui che il processo lo implementa (\english{Service Desk Manager}). Durante la creazione della tassonomia non:
 
-E' necessario inoltre stabilire la \keyword{gravità} e l'\keyword{impatto} dell'incidente, perché tutti gli incidenti sono importanti per l'utente ma incidenti che affliggono numerosi gruppi di persone o funzioni \english{mission critical} devono essere affrontati per primi.
+\begin{itemize}
+\item{mescolare assieme gli obiettivi di classificazione con quelli di ricerca e diagnostica;}
+\item{creare schemi troppo ricchi che rendono la classificazione molto difficile;}
+\item{creare schemi troppo tecnici;}
+\item{creare schemi che mirano ad aiutare l'utente nella scelta del gruppo di supporto adeguato.}
+\end{itemize}
+
+Il proponente propone di adottare la seguente convenzione, composta da tre elementi
+
+\begin{center}
+\attribute{tipologia} | \attribute{categoria} | \attribute{oggetto}
+\end{center}
+
+La tipologia deve indicare il tipo di lavoro che deve essere compiuto; dev'essere chiaramente definito come il \english{Service Desk} deve rispondere alla richiesta.
+
+Ogni tipologia individuata va suddivisa in categorie che consentono di selezionare il dominio tecnologico e cosi meglio localizzare la richiesta.
+
+Infine viene aggiunto l'oggetto \english{target} della richiesta affinché il personale del \english{Service Desk} abbia conoscenza su quale versione del prodotto ricercare l'anomalia segnalata.
+
+Per esempio di categorizzazione è il seguente:
+
+\begin{center}
+\attribute{richiesta di servizio} | \attribute{aiuto all'utente} | \attribute{aurora 1.0 - salvataggio}
+\end{center}
 
 \subsection[Priorità]{priorità}
 \label{im-management-priority}

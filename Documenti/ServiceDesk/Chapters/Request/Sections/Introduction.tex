@@ -13,12 +13,12 @@ Il processo fornisce un metodo coerente che gli utenti devono seguire in caso di
 
 \subsection[Scopo principale]{scopo principale}
 \label{rf-introduction-scope}
-Lo scopo principale del processo \acf{Request-Fulfillment} è quello di soddisfare le richieste, provenienti dagli utenti, che però non sono disservizi.
+Lo scopo principale del processo \acf{Request-Fulfillment} è quello di soddisfare le richieste, provenienti dagli utenti, che non sono disservizi.
 
 Vengono esclusi da questo processo:
 
 \begin{itemize}
-\item{gli incidenti che sono gestiti dal processi di \ac{Incident-Management} (vedi Capitolo \ref{im};)}
+\item{gli incidenti che sono gestiti dal processi di \ac{Incident-Management} (vedi Capitolo \ref{im});}
 \item{modifiche a sistemi come risultato del processo di \ac{Problem-Management}.}
 \end{itemize}
 
@@ -34,7 +34,7 @@ Instaziando il processo si vogliono raggiungere i seguenti \keyword{obiettivi}:
 \item{le \english{service request} devono essere debitamente dimensionate in base a costo/beneficio;}
 \item{le \english{service request} devono essere propriamente corredate di priorità e gestite nella sequenza corretta;}
 \item{le \english{service request} fornite devono soddisfare i requisiti dell'utente;}
-\item{lo sforzo non è sprecato su richieste non approvate.}
+\item{non si deve dedicare attenzione tempo ed attenzione alle richieste non approvate.}
 \end{itemize}
 
 \subsection[Definizioni]{definizioni}
@@ -47,26 +47,26 @@ Una \english{Service Request} è una richiesta iniziata dall'utente. La richiest
 Il processo differenzia due tipologie di richieste:
 
 \begin{itemize}
-\item{\textbf{\ac{Assistant-Service-Request}}: richiesta di un sostegno continuo di \english{routine} al fine di mantenere attiva la produzione dell'utente. Per essere considerata una richiesta di \english{routine} deve presentare le seguenti caratteristiche:}
+\item{\textbf{\ac{Assistant-Service-Request}}: richiesta di un sostegno continuo di \english{routine} al fine di mantenere attiva la produzione dell'utente. Per essere considerata una richiesta di \english{routine}, essa deve presentare le seguenti caratteristiche:}
 \begin{itemize}
 \item{requisiti riconosciuti;}
 \item{soluzione conosciuta;}
 \item{costo conosciuto;}
 \item{rischio conosciuto;}
 \item{nessun impatto nello \ac{Service-Level-Agreement};}
-\item{richiesta pre approvata.}
+\item{richiesta pre-approvata.}
 \end{itemize}
 \item{\textbf{\ac{Enhancement-Change-Request}}: richiesta per la modifica o aggiunta di nuove funzionalità ad un servizio esistente.}
 \end{itemize}
 
 \subsubsection{carenza}
-Una carenza si ha quando il servizio fornito non incontra, pienamente o parzialmente le richieste espresse dall'utente oppure quanto definito nello \ac{Service-Level-Agreement}.
+Una carenza si ha quando il servizio fornito non incontra, pienamente o parzialmente, le richieste espresse dall'utente oppure quanto definito nello \ac{Service-Level-Agreement}.
 
 \subsubsection{service request standard}
-Le richieste standard corrispondono alle \ac{Assistant-Service-Request} poiché possiedono aspettative predefinite, standard di qualità e tempestività di servizio pre approvati.
+Le richieste standard corrispondono alle \ac{Assistant-Service-Request} poiché possiedono aspettative predefinite, standard di qualità e tempestività di servizio pre-approvati.
 
 \subsubsection{request repository}
 Il \english{request repository} è un \english{database} logico in cui vengono inserite tutte le informazioni rilevanti sulle \english{Service Request} compiute e pendenti.
 
 \subsubsection{Service Agreement}
-Un \english{service agreement} è un accordo generale che delinea i servizi da fornire, nonché i coste dei servizi e come sono da fatturare. Si distingue da un contratto sui livelli di servizio in quanto non ci sono obiettivi sul livello di servizio all'interno di un contratto di assistenza.
+Un \english{service agreement} è un accordo generale che delinea i servizi da fornire, nonché i costi dei servizi e come sono da fatturare. Si distingue da un contratto sui livelli di servizio in quanto non ci sono obiettivi sul livello di servizio all'interno di un contratto di assistenza.

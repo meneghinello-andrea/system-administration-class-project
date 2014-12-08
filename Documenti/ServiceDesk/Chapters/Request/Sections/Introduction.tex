@@ -1,0 +1,71 @@
+%------------------------------------------------
+%
+% Introduction.tex 
+%
+% This section introduces the request fulfillment
+% process.
+%------------------------------------------------
+\section[Introduzione]{introduzione}
+\label{im-introduction}
+Questo capitolo descrive il processo di \acf{Request-Fulfillment} per la funzione di \english{Service Desk} dell'\entity{}.
+
+Il processo fornisce un metodo coerente che gli utenti devono seguire in caso di richieste di servizio compatibili con il \english{Service Catalogue} esposto.
+
+\subsection[Scopo principale]{scopo principale}
+\label{im-introduction-scope}
+Lo scopo principale del processo \acf{Request-Fulfillment} è quello di soddisfare le richieste, provenienti dagli utenti, che però non sono disservizi.
+
+Vengono escluse da questo processo:
+
+\begin{itemize}
+\item{gli incidenti che sono gestiti dal processi di \ac{Incident-Management} (vedi Capitolo \ref{im};)}
+\item{modifiche a sistemi come risultato del processo di \ac{Problem-Management}.}
+\end{itemize}
+
+\subsection[Obiettivi]{obiettivi}
+\label{im-introduction-objectives}
+Instaziando il processo si vogliono raggiungere i seguenti \keyword{obiettivi}:
+
+\begin{itemize}
+\item{le \english{service request} devono essere propriamente registrate;}
+\item{le \english{service request} devono essere propriamente instradate;}
+\item{lo stato di ogni \english{service request} deve essere segnalato con precisione;}
+\item{la coda delle \english{service request} non ancora risolte deve essere visibile e segnalata;}
+\item{le \english{service request} devono essere debitamente dimensionate in base a costo/beneficio;}
+\item{le \english{service request} devono essere propriamente corredate di priorità e gestite nella sequenza corretta;}
+\item{le \english{service request} fornite devono soddisfare i requisiti dell'utente;}
+\item{lo sforzo non è sprecato su richieste non approvate.}
+\end{itemize}
+
+\subsection[Definizioni]{definizioni}
+\label{im-introduction-definitions}
+In questa sezione seguono brevi definizioni e precisazioni riguardo i termini utilizzati nel contesto del processo di \ac{Request-Fullfillment}. Questi termini sono qui esplicitati al fine di garantire chiarezza nella comprensione dei contenuti nelle sezioni seguenti.
+
+\subsubsection{service request}
+Una \english{Service Request} è una richiesta iniziata dall'utente. La richiesta è specifica su servizi presenti nel \english{Service Catalogue}.
+
+Il processo differenzia due tipologie di richieste:
+
+\begin{itemize}
+\item{\textbf{\ac{Assistant-Service-Request}}: richiesta di un sostegno continuo di \english{routine} al fine di mantenere attiva la produzione dell'utente. Per essere considerata una richiesta di \english{routine} deve presentare le seguenti caratteristiche:}
+\begin{itemize}
+\item{requisiti riconosciuti;}
+\item{soluzione conosciuta;}
+\item{costo conosciuto;}
+\item{rischio conosciuto;}
+\item{nessun impatto nello \ac{Service-Level-Agreement};}
+\item{richiesta pre approvata.}
+\end{itemize}
+\item{\textbf{\ac{Enhancement-Change-Request}}: richiesta per la modifica o aggiunta di nuove funzionalità ad un servizio esistente.}
+\end{itemize}
+
+\subsubsection{carenza}
+Una carenza si ha quando il servizio fornito non incontra, pienamente o parzialmente le richieste espresse dall'utente oppure quanto definito nello \ac{Service-Level-Agreement}.
+
+\subsubsection{service request standard}
+Le richieste standard corrispondono alle \ac{Assistant-Service-Request} poiché possiedono aspettative predefinite, standard di qualità e tempestività di servizio pre approvati.
+
+\subsubsection{request repository}
+Il \english{request repository} è un \english{database} logico in cui vengono inserite tutte le informazioni rilevanti sulle \english{Service Request} compiute e pendenti.
+
+%\subsection{

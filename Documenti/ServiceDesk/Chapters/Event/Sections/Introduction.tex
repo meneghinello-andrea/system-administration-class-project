@@ -15,9 +15,9 @@ Il processo fornisce un metodo coerente che gli utenti del \english{Service Desk
 \label{em-introduction-scope}
 Lo scopo principale che questo processo possiede, e per questo si rende necessario implementarlo all'interno del nuovo \english{Service Desk}, è quello di porsi come base per il \keyword{monitoraggio} ed il \keyword{controllo} dell'ambiente \acs{Information-Technology}.
 
-Un funzionamento \english{efficace} di un qualsiasi servizio \acs{Information-Technology} dipende dalla conoscenza dello stato dell'infrastruttura e dal rilevare qualsiasi deviazione dal funzionamento atteso. Questo lo si ottiene attraverso un monitoraggio continuo e l'adozione di sistemi di controllo.
+Un funzionamento \keyword{efficace} di un qualsiasi servizio \acs{Information-Technology} dipende dalla conoscenza dello stato dell'infrastruttura e dal rilevare qualsiasi deviazione dal funzionamento atteso. Questo lo si ottiene attraverso un monitoraggio continuo e l'adozione di sistemi di controllo.
 
-Inoltre un'opportuna programmazione degli eventi il personale del \english{Service Desk} è in grado di effettuare azioni di ripristino ancor prima che l'incidente possa verificarsi.
+Inoltre con un'opportuna programmazione degli eventi il personale del \english{Service Desk} è in grado di effettuare azioni di ripristino ancor prima che l'incidente possa verificarsi.
 
 \subsection[Obiettivi]{obiettivi}
 \label{em-introduction-objectives}
@@ -25,7 +25,7 @@ Instanziando il processo si intendono raggiungere i seguenti \keyword{obiettivi}
 
 \begin{itemize}
 \item{controllare l'evoluzione dei \ac{Configuration-Item} presenti;}
-\item{controllare le condizioni ambientali (entrate/uscite - antincendio);}
+\item{controllare le condizioni ambientali (entrate/uscite - antincendio - gas nocivi);}
 \item{monitorare l'utilizzo delle licenze \english{software}.}
 \end{itemize}
 
@@ -52,3 +52,15 @@ Un evento della tipologia ``\english{warning}'' è generato quando un servizio o
 Un evento della tipologia ``\english{exception}'' è generato quando un servizio o sistema sta operando in modo anomalo. Tipicamente significa che vi è una violazione nello \ac{Service-Level-Agreement} ed il \english{business} è stato impattato.
 
 Generalmente rappresentano un totale fallimento del sistema, alterazione di funzionalità o degrado delle \english{performance}.
+
+\subsubsection{Trigger}
+Un \english{trigger} corrisponde ad una attività di risposta successiva alla correlazione di un evento. Esistono differenti tipologie di \english{trigger}, tra cui si trovano:
+
+\begin{itemize}
+\item{\english{trigger} che generano un \english{incident ticket};}
+\item{\english{trigger} che generano una \ac{Request-For-Change};}
+\item{\english{trigger} in risposta ad una \english{Request-For-Change};}
+\item{\english{trigger} che eseguono specifiche azioni;}
+\item{\english{trigger} che avvisano il personale opportuno;}
+\item{\english{trigger} di \english{database}.}
+\end{itemize}

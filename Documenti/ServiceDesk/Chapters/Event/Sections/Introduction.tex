@@ -1,0 +1,54 @@
+%------------------------------------------------
+%
+% Introduction.tex 
+%
+% This section introduces the request fulfillment
+% process.
+%------------------------------------------------
+\section[Introduzione]{introduzione}
+\label{rf-introduction}
+Questo capitolo descrive il processo di \acf{Event-Management} per la funzione di \english{Service Desk} dell'\entity{}.
+
+Il processo fornisce un metodo coerente che gli utenti del \english{Service Desk} dovranno utilizzare per monitorare l'ambiente \acs{Information-Technology} in cui sono ospitati i servizi offerti.
+
+\subsection[Scopo principale]{scopo principale}
+\label{em-introduction-scope}
+Lo scopo principale che questo processo possiede, e per questo si rende necessario implementarlo all'interno del nuovo \english{Service Desk}, è quello di porsi come base per il \keyword{monitoraggio} ed il \keyword{controllo} dell'ambiente \acs{Information-Technology}.
+
+Un funzionamento \english{efficace} di un qualsiasi servizio \acs{Information-Technology} dipende dalla conoscenza dello stato dell'infrastruttura e dal rilevare qualsiasi deviazione dal funzionamento atteso. Questo lo si ottiene attraverso un monitoraggio continuo e l'adozione di sistemi di controllo.
+
+Inoltre un'opportuna programmazione degli eventi il personale del \english{Service Desk} è in grado di effettuare azioni di ripristino ancor prima che l'incidente possa verificarsi.
+
+\subsection[Obiettivi]{obiettivi}
+\label{em-introduction-objectives}
+Instanziando il processo si intendono raggiungere i seguenti \keyword{obiettivi}:
+
+\begin{itemize}
+\item{controllare l'evoluzione dei \ac{Configuration-Item} presenti;}
+\item{controllare le condizioni ambientali (entrate/uscite - antincendio);}
+\item{monitorare l'utilizzo delle licenze \english{software}.}
+\end{itemize}
+
+\subsection[Definizioni]{definizioni}
+\label{em-introduction-definitions}
+
+\subsubsection{evento}
+Un \keyword{evento} può essere definito come qualsiasi occorrenza visibile o rilevabile che ha significato per la gestione dell'infrastruttura \acs{Information-Technology} e valutazione sull'impatto che potrebbe causare un disservizio.
+
+Gli eventi sono in genere notifiche create da un servizio \acs{Information-Technology}, un elemento di configurazione (\acs{Configuration-Item}) oppure da uno strumento di monitoraggio.
+
+\begin{itemize}
+\item{\textbf{attivi}: sono sistemi che periodicamente interrogano lo stato degli elementi di configurazione (\ac{Configuration-Item}) del sistema. (tecnica di \english{polling});}
+\item{\textbf{passivi}: sono sistemi che vengono notificati dai singoli elementi di configurazione (\ac{Configuration-Item}) del sistema quando un evento significativo accade.}
+\end{itemize}
+
+\subsubsection{evento informativo}
+Si tratta di un particolare tipo di evento che non richiede azioni attive da parte degli operatori e non rappresenta casi eccezionali. E' generalmente memorizzato all'interno del dispositivo che lo ha generato oppure in un \english{database} logico per un determinato periodo temporale.
+
+\subsubsection{evento ``warning''}
+Un evento della tipologia ``\english{warning}'' è generato quando un servizio oppure un dispositivo sta per raggiungere una soglia critica. Intendono notificare al personale del \english{Service Desk} che vi è necessità di un controllare la situazione e prendere le dovute contromisure prima che venga generato un evento di \english{exception}.
+
+\subsubsection{evento ``exception''}
+Un evento della tipologia ``\english{exception}'' è generato quando un servizio o sistema sta operando in modo anomalo. Tipicamente significa che vi è una violazione nello \ac{Service-Level-Agreement} ed il \english{business} è stato impattato.
+
+Generalmente rappresentano un totale fallimento del sistema, alterazione di funzionalità o degrado delle \english{performance}.

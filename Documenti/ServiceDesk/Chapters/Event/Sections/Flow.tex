@@ -1,0 +1,58 @@
+%------------------------------------------------
+%
+% Flow.tex 
+%
+% This section introduces the incident management
+% process flow.
+%------------------------------------------------
+\section[Attività di processo]{attività di processo}
+\label{em-flow}
+Nella seguente sezione viene riportato il flusso delle attività presenti nel processo che gli operatori del \english{Service Desk} devono seguire quando sono generati degli eventi. In Figura \ref{em-flow-img} è visualizzato un diagramma di flusso rappresentante le attività, mentre ogni singolo \english{step} è elencato in Tabella \ref{em-flow-table}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale=0.2]{Images/Diagrams/Event_Management.png}
+\caption{Flusso attività del processo di \ac{Event-Management}}
+\label{em-flow-img}
+\end{figure}
+
+\begin{center}
+\begin{longtable}{| p{3cm} | p{2cm} | p {7cm} |}
+\caption{Elenco attività di processo}
+\label{em-flow-table}\\
+\hline
+\multicolumn{1}{| c |}{\textbf{Ruolo}} & \multicolumn{1}{| c |}{\textbf{Step}} & \multicolumn{1}{| c |}{\textbf{Descrizione}}\\
+\hline
+\endfirsthead
+\hline
+\multicolumn{1}{| c |}{\textbf{Ruolo}} & \multicolumn{1}{| c |}{\textbf{Step}} & \multicolumn{1}{| c |}{\textbf{Descrizione}}\\
+\hline
+\endhead
+Sistema/Sensore & 1 & L'evento viene generato dal sistema oppure dal sensore.\\
+\hline
+\multirow{8}{*}{Sistema/Sensore} & 2 & L'evento viene comunicato al \english{tool} di supporto (sistema passivo) oppure il \english{tool} di supporto si accorge che un evento è stato scatenato (sistema attivo).\\
+\cline{2-3}
+& 3 & L'evento assegnata una tipologia all'evento.\\
+\cline{2-3}
+& 5 & L'evento generato è di tipo informativo per cui è sufficiente registrarlo.\\
+\cline{2-3}
+& 6 & L'evento è di tipo \english{warning} e viene ora correlato dal \english{tool} di supporto che decide quale azione svolgere sulla base dei criteri con cui è stato programmato.\\
+\cline{2-3}
+& 7 & Il sistema ha generato un evento di tipo \english{exception} ed in base a criteri con cui verrà programmato il \english{tool} di supporto verrà aperto un \english{ticket} verso il processo di \ac{Incident-Management} oppure \ac{Problem-Management} oppure \acs{Change-Management}.\\
+\cline{2-3}
+& 8 & Un \english{trigger} verifica se l'azione decisa dopo la correlazione ha risolto l'evento. Se l'evento è risolto proseguire con lo \english{step} 9 altrimenti con lo \english{step} 10.\\
+\cline{2-3}
+& 9 & Il \english{trigger} ha verificato che l'evento si è concluso positivamente per cui si prosegue con lo \english{step} 12.\\
+\cline{2-3}
+& 10 & Il \english{trigger} ha verificato che l'anomalia non si è risolta attraverso \english{script} automatici ed notifica che è necessario un intervento umano.\\
+\hline
+\multirow{4}{*}{operatore} & 11 & Il tecnico del \english{Service Desk} interviene per valutare la situazione e decidere l'azione più opportuna da intraprendere.\\
+\cline{2-3}
+& 12 & Viene eseguita una revisione per vedere se le cause che hanno generato l'evento.\\
+\cline{2-3}
+& 13 & Se la revisione ha avuto esito positivo si procede con lo \english{step} 14 altrimenti si ritorna allo \english{step} 7.\\
+\cline{2-3}
+& 14 & Vengono memorizzate tracciate in modo persistente tutte le informazioni sull'intervento e l'evento viene segnalato come concluso.\\
+\hline
+\end{longtable}
+\end{center}

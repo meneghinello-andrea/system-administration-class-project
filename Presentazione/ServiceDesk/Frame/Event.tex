@@ -8,12 +8,11 @@
 {
 \frametitle{Contenuti}
 \tableofcontents[currentsection]
-%\addtocounter{framenumber}{-1}
+\addtocounter{framenumber}{-1}
 }
 
 \subsection*{Input e Output}
 \begin{frame}{Input e Output}
-Input:
 \begin{table}
 \begin{tabular}{ l | c }
 \textbf{Input} & \textbf{Da}\\
@@ -26,22 +25,47 @@ Log applicativi & Applicazioni\\
 Notifiche accessi/uscite & Sistemi controllo accessi\\
 Notifiche di emergenza & Sensori\\
 \end{tabular}
-\caption{input di processo}
+\caption{Input di processo}
 \end{table}
-Output:
+\begin{columns}
+\begin{column}{0.3\textwidth}
+\begin{figure}
+\vspace{-15mm}
+\includegraphics[scale=0.1]{Images/Input_output.png}
+\end{figure}
+\end{column}
+\begin{column}{0.7\textwidth}
 \begin{table}
 \begin{tabular}{ c | c }
-\textbf{Output} & \textbf{Da}\\
+\textbf{Output} & \textbf{Verso}\\
 \hline
 Ticket & Service Desk\\
 \end{tabular}
-\caption{output di processo}
+\caption{Output di processo}
 \end{table}
+\end{column}
+\end{columns}
+\end{frame}
+
+\subsection*{Metriche di processo}
+\begin{frame}{Metriche}
+Saranno prodotti report mensili con le seguenti metriche:
+\begin{itemize}
+\item{numero di eventi per tipo - significato - duplicazione}
+\item{numero di eventi che hanno richiesto intervento umano}
+\item{numero di eventi che hanno portato incidenti/cambiamenti}
+\item{numero di eventi che hanno portato problemi/KE}
+\item{numero di eventi che hanno notificato richieste di performance - risorse}
+\item{rapporto tra eventi ed incidenti}
+\end{itemize}
+\begin{figure}
+\includegraphics[scale=0.13]{Images/Metrics.png}
+\end{figure}
 \end{frame}
 
 \subsection*{Attività di processo}
 \begin{frame}{Attività di processo}
 \begin{figure}
-\includegraphics[scale=0.22]{Images/Event_management.png}
+\includegraphics[scale=0.16]{Images/Event_management.png}
 \end{figure}
 \end{frame}

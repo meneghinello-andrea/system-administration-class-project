@@ -13,26 +13,48 @@
 
 \subsection*{Input e Output}
 \begin{frame}{Input e Output}
-Input:
 \begin{table}
-\begin{tabular}{ l | c }
+\begin{tabular}{ l | l }
 \textbf{Input} & \textbf{Da}\\
 \hline
 Incidente (ticket) & Utenti\\
 Soluzione a problemi & Problem Management\\
 Risposte a RFC & Change Management\\
 \end{tabular}
-\caption{input di processo}
+\caption{Input di processo}
 \end{table}
-Output:
+\begin{columns}
+\begin{column}{0.3\textwidth}
+\begin{figure}
+\includegraphics[scale=0.1]{Images/Input_output.png}
+\end{figure}
+\end{column}
+\begin{column}{0.7\textwidth}
 \begin{table}
 \begin{tabular}{ c | c }
 \textbf{Output} & \textbf{Da}\\
 \hline
 Notifiche & Utenti\\
 \end{tabular}
-\caption{output di processo}
+\caption{Output di processo}
 \end{table}
+\end{column}
+\end{columns}
+\end{frame}
+
+\subsection*{Metriche di processo}
+\begin{frame}{Metriche}
+Saranno prodotti report mensili con le seguenti metriche:
+\begin{itemize}
+\item{numero totale di incidenti - suddivisi per stato - non risolti}
+\item{numero e percentuale di incidenti gravi}
+\item{tempo medio per la produzione di un risultato}
+\item{percentuale di incidenti risolti entro SLA}
+\item{numero di incidenti riaperti}
+\end{itemize}
+\begin{figure}
+\includegraphics[scale=0.13]{Images/Metrics.png}
+\end{figure}
 \end{frame}
 
 \subsection*{Attività di processo}
